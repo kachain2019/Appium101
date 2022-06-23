@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220623 20:23:04.577" rpa="false" schemaversion="3">
+<suite id="s1" name="Test" source="C:\Users\kachain3099\Desktop\RBFW_appium\APPIUM_101\TestSuite\test.robot">
+<test id="s1-t1" name="TC1" line="9">
+<kw name="Open application youtube on android" library="commonKeyword">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME_ANDROID}</arg>
+<arg>deviceName=${DEVICE_NAME_ANDROID}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${MAIN_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220623 20:23:04.786" endtime="20220623 20:23:18.980"/>
+</kw>
+<status status="PASS" starttime="20220623 20:23:04.785" endtime="20220623 20:23:18.980"/>
+</kw>
+<kw name="Input music" library="commonKeyword">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${txt_search}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220623 20:23:18.983" level="INFO">Clicking element 'Xpath=//*[@resource-id="com.google.android.youtube:id/menu_item_1"]'.</msg>
+<status status="PASS" starttime="20220623 20:23:18.981" endtime="20220623 20:23:23.147"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${txt_input_search}</arg>
+<arg>${music}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20220623 20:23:23.149" level="INFO">Typing text 'ทักครับ' into text field 'id=com.google.android.youtube:id/search_edit_text'</msg>
+<status status="PASS" starttime="20220623 20:23:23.148" endtime="20220623 20:23:25.085"/>
+</kw>
+<status status="PASS" starttime="20220623 20:23:18.981" endtime="20220623 20:23:25.085"/>
+</kw>
+<kw name="Search music" library="commonKeyword">
+<kw name="Press Keycode" library="AppiumLibrary">
+<arg>66</arg>
+<doc>Sends a press of keycode to the device.</doc>
+<status status="PASS" starttime="20220623 20:23:25.086" endtime="20220623 20:23:26.037"/>
+</kw>
+<status status="PASS" starttime="20220623 20:23:25.085" endtime="20220623 20:23:26.037"/>
+</kw>
+<kw name="Select music" library="commonKeyword">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${lbl_music}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220623 20:23:26.038" endtime="20220623 20:23:28.766"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${lbl_music}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220623 20:23:28.768" level="INFO">Clicking element 'android=UiSelector().descriptionContains("ทักครับ - Lipta Feat. GUYGEEGEE [OFFICIAL MUSIC VIDEO]")'.</msg>
+<status status="PASS" starttime="20220623 20:23:28.767" endtime="20220623 20:23:28.888"/>
+</kw>
+<status status="PASS" starttime="20220623 20:23:26.038" endtime="20220623 20:23:28.888"/>
+</kw>
+<status status="PASS" starttime="20220623 20:23:04.785" endtime="20220623 20:23:28.888"/>
+</test>
+<status status="PASS" starttime="20220623 20:23:04.579" endtime="20220623 20:23:28.890"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
