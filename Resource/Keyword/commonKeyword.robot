@@ -1,30 +1,92 @@
 *** Settings ***
 Library           AppiumLibrary
-Library           BuiltIn
 Resource          ${CURDIR}/../../Resource/Repository/commonRepository.robot
 Resource          ${CURDIR}/../../Resource/Variable/commonVariable.robot
 
 *** Keywords ***
 Open application youtube on android
-    Open Application    ${REMOTE_URL}    platformName=${PLATFORM_NAME_ANDROID}    deviceName=${DEVICE_NAME_ANDROID}      appPackage=${APP_PACKAGE}     appActivity=${MAIN_ACTIVITY}
+    Open Application    ${REMOTE_URL}     platformName=${PLATFORM_NAME_ANDROID}    
+    ...   deviceName=${DEVICE_NAME_ANDROID}      
+    ...   appPackage=${APP_PACKAGE}     
+    ...   appActivity=${MAIN_ACTIVITY}
 
 Input music
-    Click Element       ${txt_search} 
-    Input Text          ${txt_input_search}      ${music}
+    Wait Until Page Contains Element       ${icn_search}
+    Click Element       ${icn_search} 
+    Input Text          ${txt_search}      ${music_name}
 
 Search music
     Press Keycode       66
-    # Click Element       Xpath=//*[@resource-id="com.google.android.youtube:id/text"][text()="ทักครับ"]
-    # Wait Until Page Contains Element      Xpath=//android.widget.LinearLayout[0]
-    # Click Element       Xpath=//android.widget.LinearLayout[0]
-    # Click Element       //android.widget.LinearLayout[@content-desc="Back"])[1]
+    # Wait Until Element Is Visible       ${lbl_select_music}
+    # Click Element       ${lbl_select_music}
 
-Select music
+Click music
      Wait Until Page Contains Element       ${lbl_music}
      Click Element       ${lbl_music}
 
 Verify music name
-    Wait Until Element Is Visible        ${lbl_name_music}
-    ${title_music}      Get Text       ${lbl_name_music}
-    Log To Console      ${title_music}    
-    Element Text Should Be      ${lbl_name_music}       ${verify_name}
+    # Wait Until Element Is Visible        ${lbl_name_music}
+    # ${title_music}      Get WebElement 	      ${lbl_name_music}
+    # Log To Console      ${title_music}    
+    # Element Text Should Be      ${lbl_name_music}       ${music_name}
+    ${status_ad}    Run Keyword And Return Status     Get Element Location     ${img_ad}
+    Log To Console      ${status_ad}
+    IF  ${status_ad} == True
+        Log To Console   Have ad
+        Wait Until Element Is Visible       ${pnl_skip_ad}
+        Click Element       ${pnl_skip_ad}
+    ELSE
+        Log To Console     Not ad
+    END
+
+Go to ui youtube account page
+    Wait Until Page Contains Element    ${icn_account} 
+    Click Element    ${icn_account} 
+
+Verify locator ui youtube account [EN] page
+    Element Name Should Be      ${lbl_en_youtube_name}      com.google.android.youtube:id/account_name
+    # Element Attribute Should Match      //android.widget.LinearLayout[@resource-id]     resource-id      com.google.android.youtube:id/account_name
+
+Verify icon ui youtube account [EN] page
+    Wait Until Page Contains Element        ${pnl_content}
+    Get Element Location        ${icn_en_switch_accounts}
+    Get Element Location        ${icn_en_account_channel}
+    Get Element Location        ${icn_en_your_channel}
+    Get Element Location        ${icn_en_turn_on}
+    Get Element Location        ${icn_en_add_account}
+    Get Element Location        ${icn_en_get_youTube_premium}
+    Get Element Location        ${icn_en_purchases_and_memberships}
+    Get Element Location        ${icn_en_time_watched}
+    Get Element Location        ${icn_en_your_data_in_youTube}
+    Get Element Location        ${icn_en_settings}
+    Get Element Location        ${icn_en_help_and_feedback}
+    Get Element Location        ${icn_en_youTube_studio}
+    Get Element Location        ${icn_en_youtube_music}
+
+Verify menu name ui youtube account [EN] page
+    Element Name Should Be      ${mnu_en_youtube_name}      ONE COOL COOL
+    Element Name Should Be      ${mnu_en_manage_account}    Manage your Google Account
+    Element Name Should Be      ${mnu_en_turn_on}      Turn on Incognito
+    Element Name Should Be      ${mnu_en_add_account}      Add account
+    Element Name Should Be      ${mnu_en_get_youTube_premium}      Get YouTube Premium
+    Element Name Should Be      ${mnu_en_purchases_and_memberships}      Purchases and memberships
+    Element Name Should Be      ${mnu_en_time_watched}      Time watched
+    Element Name Should Be      ${mnu_en_your_data_in_youTube}      Your data in YouTube
+    Element Name Should Be      ${mnu_en_settings}      Settings
+    Element Name Should Be      ${mnu_en_help_and_feedback}      Help & feedback
+    Element Name Should Be      ${mnu_en_youtube_studio}        YouTube Studio
+    Element Name Should Be      ${mnu_en_youtube_music}         YouTube Music
+    Element Name Should Be      ${mnu_en_privacy_policy}        Privacy Policy
+    Element Name Should Be      ${mnu_en_terms_of_service}        Terms of Service
+    Click Element       ${btn_close}
+
+Verify ui on page play music [EN]
+    Wait Until Page Contains Element    ${pnl_onload}
+    # Get Element Attribute      Xpath=//android.view.ViewGroup[1]/android.view.ViewGroup        content-desc
+    Get Element Location      ${icn_like}
+    Get Element Location      ${icn_dislike}
+    Get Element Location      ${icn_livechat}
+    Get Element Location      ${icn_share}
+    Get Element Location      ${icn_create}
+    Get Element Location      ${icn_dowload}
+

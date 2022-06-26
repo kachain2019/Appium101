@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220623 20:23:04.577" rpa="false" schemaversion="3">
-<suite id="s1" name="Test" source="C:\Users\kachain3099\Desktop\RBFW_appium\APPIUM_101\TestSuite\test.robot">
-<test id="s1-t1" name="TC1" line="9">
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220626 21:51:28.278" rpa="false" schemaversion="3">
+<suite id="s1" name="Test" source="C:\Users\kachain3099\Desktop\RBFW_appium\APPIUM_101\Appium101\TestSuite\test.robot">
+<test id="s1-t1" name="TC1 - Verify play music is correct" line="6">
 <kw name="Open application youtube on android" library="commonKeyword">
 <kw name="Open Application" library="AppiumLibrary">
 <arg>${REMOTE_URL}</arg>
@@ -15,51 +15,349 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | *Option*            | *Man.* | *Description*     |
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |</doc>
-<status status="PASS" starttime="20220623 20:23:04.786" endtime="20220623 20:23:18.980"/>
+<status status="PASS" starttime="20220626 21:51:28.517" endtime="20220626 21:51:39.879"/>
 </kw>
-<status status="PASS" starttime="20220623 20:23:04.785" endtime="20220623 20:23:18.980"/>
+<status status="PASS" starttime="20220626 21:51:28.517" endtime="20220626 21:51:39.879"/>
+</kw>
+<kw name="Go to ui youtube account page" library="commonKeyword">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${icn_account}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220626 21:51:39.880" endtime="20220626 21:51:42.633"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${icn_account}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220626 21:51:42.635" level="INFO">Clicking element 'Xpath=//android.widget.FrameLayout/android.widget.ImageView[@resource-id="com.google.android.youtube:id/image"]'.</msg>
+<status status="PASS" starttime="20220626 21:51:42.633" endtime="20220626 21:51:43.877"/>
+</kw>
+<status status="PASS" starttime="20220626 21:51:39.879" endtime="20220626 21:51:43.877"/>
+</kw>
+<kw name="Verify icon ui youtube account [EN] page" library="commonKeyword">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${pnl_content}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220626 21:51:43.878" endtime="20220626 21:51:43.934"/>
+</kw>
+<kw name="Get Element Location" library="AppiumLibrary">
+<arg>${icn_en_switch_accounts}</arg>
+<doc>Get element location</doc>
+<msg timestamp="20220626 21:51:44.001" level="INFO">Element 'Xpath=//android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.ImageView[@resource-id="com.google.android.youtube:id/switch_account"]' location: {'x': 970, 'y': 363} </msg>
+<status status="PASS" starttime="20220626 21:51:43.934" endtime="20220626 21:51:44.001"/>
+</kw>
+<kw name="Get Element Location" library="AppiumLibrary">
+<arg>${icn_en_account_channel}</arg>
+<doc>Get element location</doc>
+<msg timestamp="20220626 21:51:44.066" level="INFO">Element 'Xpath=//android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.ImageView[@resource-id="com.google.android.youtube:id/account_thumbnail"]' location: {'x': 66, 'y': 347} </msg>
+<status status="PASS" starttime="20220626 21:51:44.001" endtime="20220626 21:51:44.066"/>
+</kw>
+<kw name="Get Element Location" library="AppiumLibrary">
+<arg>${icn_en_your_channel}</arg>
+<doc>Get element location</doc>
+<msg timestamp="20220626 21:51:44.138" level="INFO">Element 'Xpath=//android.widget.LinearLayout[2]/android.widget.ImageView[@resource-id="com.google.android.youtube:id/thumbnail"]' location: {'x': 44, 'y': 579} </msg>
+<status status="PASS" starttime="20220626 21:51:44.066" endtime="20220626 21:51:44.138"/>
+</kw>
+<kw name="Get Element Location" library="AppiumLibrary">
+<arg>${icn_en_turn_on}</arg>
+<doc>Get element location</doc>
+<msg timestamp="20220626 21:51:44.204" level="INFO">Element 'Xpath=//android.widget.LinearLayout[3]/android.widget.ImageView[@resource-id="com.google.android.youtube:id/thumbnail"]' location: {'x': 44, 'y': 711} </msg>
+<status status="PASS" starttime="20220626 21:51:44.138" endtime="20220626 21:51:44.204"/>
+</kw>
+<kw name="Get Element Location" library="AppiumLibrary">
+<arg>${icn_en_add_account}</arg>
+<doc>Get element location</doc>
+<msg timestamp="20220626 21:51:44.265" level="INFO">Element 'Xpath=//android.widget.LinearLayout[4]/android.widget.ImageView[@resource-id="com.google.android.youtube:id/thumbnail"]' location: {'x': 44, 'y': 843} </msg>
+<status status="PASS" starttime="20220626 21:51:44.204" endtime="20220626 21:51:44.265"/>
+</kw>
+<kw name="Get Element Location" library="AppiumLibrary">
+<arg>${icn_en_get_youTube_premium}</arg>
+<doc>Get element location</doc>
+<msg timestamp="20220626 21:51:44.331" level="INFO">Element 'Xpath=//android.widget.LinearLayout[5]/android.widget.ImageView[@resource-id="com.google.android.youtube:id/thumbnail"]' location: {'x': 44, 'y': 1019} </msg>
+<status status="PASS" starttime="20220626 21:51:44.266" endtime="20220626 21:51:44.331"/>
+</kw>
+<kw name="Get Element Location" library="AppiumLibrary">
+<arg>${icn_en_purchases_and_memberships}</arg>
+<doc>Get element location</doc>
+<msg timestamp="20220626 21:51:44.394" level="INFO">Element 'Xpath=//android.widget.LinearLayout[6]/android.widget.ImageView[@resource-id="com.google.android.youtube:id/thumbnail"]' location: {'x': 44, 'y': 1151} </msg>
+<status status="PASS" starttime="20220626 21:51:44.331" endtime="20220626 21:51:44.394"/>
+</kw>
+<kw name="Get Element Location" library="AppiumLibrary">
+<arg>${icn_en_time_watched}</arg>
+<doc>Get element location</doc>
+<msg timestamp="20220626 21:51:44.458" level="INFO">Element 'Xpath=//android.widget.LinearLayout[7]/android.widget.ImageView[@resource-id="com.google.android.youtube:id/thumbnail"]' location: {'x': 44, 'y': 1283} </msg>
+<status status="PASS" starttime="20220626 21:51:44.394" endtime="20220626 21:51:44.458"/>
+</kw>
+<kw name="Get Element Location" library="AppiumLibrary">
+<arg>${icn_en_your_data_in_youTube}</arg>
+<doc>Get element location</doc>
+<msg timestamp="20220626 21:51:44.516" level="INFO">Element 'Xpath=//android.widget.LinearLayout[8]/android.widget.ImageView[@resource-id="com.google.android.youtube:id/thumbnail"]' location: {'x': 44, 'y': 1415} </msg>
+<status status="PASS" starttime="20220626 21:51:44.458" endtime="20220626 21:51:44.516"/>
+</kw>
+<kw name="Get Element Location" library="AppiumLibrary">
+<arg>${icn_en_settings}</arg>
+<doc>Get element location</doc>
+<msg timestamp="20220626 21:51:44.575" level="INFO">Element 'Xpath=//android.widget.LinearLayout[9]/android.widget.ImageView[@resource-id="com.google.android.youtube:id/thumbnail"]' location: {'x': 44, 'y': 1591} </msg>
+<status status="PASS" starttime="20220626 21:51:44.516" endtime="20220626 21:51:44.575"/>
+</kw>
+<kw name="Get Element Location" library="AppiumLibrary">
+<arg>${icn_en_help_and_feedback}</arg>
+<doc>Get element location</doc>
+<msg timestamp="20220626 21:51:44.647" level="INFO">Element 'Xpath=//android.widget.LinearLayout[10]/android.widget.ImageView[@resource-id="com.google.android.youtube:id/thumbnail"]' location: {'x': 44, 'y': 1723} </msg>
+<status status="PASS" starttime="20220626 21:51:44.576" endtime="20220626 21:51:44.647"/>
+</kw>
+<kw name="Get Element Location" library="AppiumLibrary">
+<arg>${icn_en_youTube_studio}</arg>
+<doc>Get element location</doc>
+<msg timestamp="20220626 21:51:44.709" level="INFO">Element 'Xpath=//android.widget.LinearLayout[11]/android.widget.ImageView[@resource-id="com.google.android.youtube:id/thumbnail"]' location: {'x': 44, 'y': 1899} </msg>
+<status status="PASS" starttime="20220626 21:51:44.647" endtime="20220626 21:51:44.709"/>
+</kw>
+<kw name="Get Element Location" library="AppiumLibrary">
+<arg>${icn_en_youtube_music}</arg>
+<doc>Get element location</doc>
+<msg timestamp="20220626 21:51:44.772" level="INFO">Element 'Xpath=//android.widget.LinearLayout[12]/android.widget.ImageView[@resource-id="com.google.android.youtube:id/thumbnail"]' location: {'x': 44, 'y': 2031} </msg>
+<status status="PASS" starttime="20220626 21:51:44.709" endtime="20220626 21:51:44.772"/>
+</kw>
+<status status="PASS" starttime="20220626 21:51:43.877" endtime="20220626 21:51:44.772"/>
+</kw>
+<kw name="Verify menu name ui youtube account [EN] page" library="commonKeyword">
+<kw name="Element Name Should Be" library="AppiumLibrary">
+<arg>${mnu_en_youtube_name}</arg>
+<arg>ONE COOL COOL</arg>
+<msg timestamp="20220626 21:51:44.842" level="INFO">Element 'Xpath=//android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.Button' name is 'ONE COOL COOL' </msg>
+<status status="PASS" starttime="20220626 21:51:44.772" endtime="20220626 21:51:44.842"/>
+</kw>
+<kw name="Element Name Should Be" library="AppiumLibrary">
+<arg>${mnu_en_manage_account}</arg>
+<arg>Manage your Google Account</arg>
+<msg timestamp="20220626 21:51:44.897" level="INFO">Element '//android.widget.Button[@resource-id="com.google.android.youtube:id/manage_account"]' name is 'Manage your Google Account' </msg>
+<status status="PASS" starttime="20220626 21:51:44.842" endtime="20220626 21:51:44.897"/>
+</kw>
+<kw name="Element Name Should Be" library="AppiumLibrary">
+<arg>${mnu_en_turn_on}</arg>
+<arg>Turn on Incognito</arg>
+<msg timestamp="20220626 21:51:44.957" level="INFO">Element 'Xpath=//android.widget.LinearLayout[3]/android.widget.RelativeLayout/android.widget.TextView' name is 'Turn on Incognito' </msg>
+<status status="PASS" starttime="20220626 21:51:44.897" endtime="20220626 21:51:44.957"/>
+</kw>
+<kw name="Element Name Should Be" library="AppiumLibrary">
+<arg>${mnu_en_add_account}</arg>
+<arg>Add account</arg>
+<msg timestamp="20220626 21:51:45.051" level="INFO">Element 'Xpath=//android.widget.LinearLayout[4]/android.widget.RelativeLayout/android.widget.TextView' name is 'Add account' </msg>
+<status status="PASS" starttime="20220626 21:51:44.957" endtime="20220626 21:51:45.051"/>
+</kw>
+<kw name="Element Name Should Be" library="AppiumLibrary">
+<arg>${mnu_en_get_youTube_premium}</arg>
+<arg>Get YouTube Premium</arg>
+<msg timestamp="20220626 21:51:45.110" level="INFO">Element 'Xpath=//android.widget.LinearLayout[5]/android.widget.RelativeLayout/android.widget.TextView' name is 'Get YouTube Premium' </msg>
+<status status="PASS" starttime="20220626 21:51:45.051" endtime="20220626 21:51:45.110"/>
+</kw>
+<kw name="Element Name Should Be" library="AppiumLibrary">
+<arg>${mnu_en_purchases_and_memberships}</arg>
+<arg>Purchases and memberships</arg>
+<msg timestamp="20220626 21:51:45.164" level="INFO">Element 'Xpath=//android.widget.LinearLayout[6]/android.widget.RelativeLayout/android.widget.TextView' name is 'Purchases and memberships' </msg>
+<status status="PASS" starttime="20220626 21:51:45.110" endtime="20220626 21:51:45.164"/>
+</kw>
+<kw name="Element Name Should Be" library="AppiumLibrary">
+<arg>${mnu_en_time_watched}</arg>
+<arg>Time watched</arg>
+<msg timestamp="20220626 21:51:45.219" level="INFO">Element 'Xpath=//android.widget.LinearLayout[7]/android.widget.RelativeLayout/android.widget.TextView' name is 'Time watched' </msg>
+<status status="PASS" starttime="20220626 21:51:45.164" endtime="20220626 21:51:45.219"/>
+</kw>
+<kw name="Element Name Should Be" library="AppiumLibrary">
+<arg>${mnu_en_your_data_in_youTube}</arg>
+<arg>Your data in YouTube</arg>
+<msg timestamp="20220626 21:51:45.288" level="INFO">Element 'Xpath=//android.widget.LinearLayout[8]/android.widget.RelativeLayout/android.widget.TextView' name is 'Your data in YouTube' </msg>
+<status status="PASS" starttime="20220626 21:51:45.219" endtime="20220626 21:51:45.288"/>
+</kw>
+<kw name="Element Name Should Be" library="AppiumLibrary">
+<arg>${mnu_en_settings}</arg>
+<arg>Settings</arg>
+<msg timestamp="20220626 21:51:45.341" level="INFO">Element 'Xpath=//android.widget.LinearLayout[9]/android.widget.RelativeLayout/android.widget.TextView' name is 'Settings' </msg>
+<status status="PASS" starttime="20220626 21:51:45.288" endtime="20220626 21:51:45.341"/>
+</kw>
+<kw name="Element Name Should Be" library="AppiumLibrary">
+<arg>${mnu_en_help_and_feedback}</arg>
+<arg>Help &amp; feedback</arg>
+<msg timestamp="20220626 21:51:45.391" level="INFO">Element 'Xpath=//android.widget.LinearLayout[10]/android.widget.RelativeLayout/android.widget.TextView' name is 'Help &amp; feedback' </msg>
+<status status="PASS" starttime="20220626 21:51:45.341" endtime="20220626 21:51:45.391"/>
+</kw>
+<kw name="Element Name Should Be" library="AppiumLibrary">
+<arg>${mnu_en_youtube_studio}</arg>
+<arg>YouTube Studio</arg>
+<msg timestamp="20220626 21:51:45.454" level="INFO">Element 'Xpath=//android.widget.LinearLayout[11]/android.widget.RelativeLayout/android.widget.TextView' name is 'YouTube Studio' </msg>
+<status status="PASS" starttime="20220626 21:51:45.391" endtime="20220626 21:51:45.454"/>
+</kw>
+<kw name="Element Name Should Be" library="AppiumLibrary">
+<arg>${mnu_en_youtube_music}</arg>
+<arg>YouTube Music</arg>
+<msg timestamp="20220626 21:51:45.505" level="INFO">Element 'Xpath=//android.widget.LinearLayout[12]/android.widget.RelativeLayout/android.widget.TextView' name is 'YouTube Music' </msg>
+<status status="PASS" starttime="20220626 21:51:45.454" endtime="20220626 21:51:45.505"/>
+</kw>
+<kw name="Element Name Should Be" library="AppiumLibrary">
+<arg>${mnu_en_privacy_policy}</arg>
+<arg>Privacy Policy</arg>
+<msg timestamp="20220626 21:51:45.556" level="INFO">Element 'Xpath=//android.widget.LinearLayout/android.widget.LinearLayout/android.widget.Button[1]' name is 'Privacy Policy' </msg>
+<status status="PASS" starttime="20220626 21:51:45.505" endtime="20220626 21:51:45.556"/>
+</kw>
+<kw name="Element Name Should Be" library="AppiumLibrary">
+<arg>${mnu_en_terms_of_service}</arg>
+<arg>Terms of Service</arg>
+<msg timestamp="20220626 21:51:45.603" level="INFO">Element 'Xpath=//android.widget.LinearLayout/android.widget.LinearLayout/android.widget.Button[2]' name is 'Terms of Service' </msg>
+<status status="PASS" starttime="20220626 21:51:45.556" endtime="20220626 21:51:45.603"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${btn_close}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220626 21:51:45.606" level="INFO">Clicking element 'Xpath=//android.widget.ImageButton[@content-desc="Close"]'.</msg>
+<status status="PASS" starttime="20220626 21:51:45.603" endtime="20220626 21:51:45.689"/>
+</kw>
+<status status="PASS" starttime="20220626 21:51:44.772" endtime="20220626 21:51:45.689"/>
 </kw>
 <kw name="Input music" library="commonKeyword">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${icn_search}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220626 21:51:45.690" endtime="20220626 21:51:45.775"/>
+</kw>
 <kw name="Click Element" library="AppiumLibrary">
-<arg>${txt_search}</arg>
+<arg>${icn_search}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220623 20:23:18.983" level="INFO">Clicking element 'Xpath=//*[@resource-id="com.google.android.youtube:id/menu_item_1"]'.</msg>
-<status status="PASS" starttime="20220623 20:23:18.981" endtime="20220623 20:23:23.147"/>
+<msg timestamp="20220626 21:51:45.777" level="INFO">Clicking element 'Xpath=//*[@resource-id="com.google.android.youtube:id/menu_item_1"]'.</msg>
+<status status="PASS" starttime="20220626 21:51:45.775" endtime="20220626 21:51:46.321"/>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
-<arg>${txt_input_search}</arg>
-<arg>${music}</arg>
+<arg>${txt_search}</arg>
+<arg>${music_name}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20220623 20:23:23.149" level="INFO">Typing text 'ทักครับ' into text field 'id=com.google.android.youtube:id/search_edit_text'</msg>
-<status status="PASS" starttime="20220623 20:23:23.148" endtime="20220623 20:23:25.085"/>
+<msg timestamp="20220626 21:51:46.324" level="INFO">Typing text 'ทักครับ - Lipta Feat. GUYGEEGEE [OFFICIAL MUSIC VIDEO]' into text field 'Xpath=//*[@resource-id="com.google.android.youtube:id/search_edit_text"]'</msg>
+<status status="PASS" starttime="20220626 21:51:46.321" endtime="20220626 21:51:49.501"/>
 </kw>
-<status status="PASS" starttime="20220623 20:23:18.981" endtime="20220623 20:23:25.085"/>
+<status status="PASS" starttime="20220626 21:51:45.690" endtime="20220626 21:51:49.501"/>
 </kw>
 <kw name="Search music" library="commonKeyword">
 <kw name="Press Keycode" library="AppiumLibrary">
 <arg>66</arg>
 <doc>Sends a press of keycode to the device.</doc>
-<status status="PASS" starttime="20220623 20:23:25.086" endtime="20220623 20:23:26.037"/>
+<status status="PASS" starttime="20220626 21:51:49.502" endtime="20220626 21:51:50.397"/>
 </kw>
-<status status="PASS" starttime="20220623 20:23:25.085" endtime="20220623 20:23:26.037"/>
+<status status="PASS" starttime="20220626 21:51:49.502" endtime="20220626 21:51:50.397"/>
 </kw>
-<kw name="Select music" library="commonKeyword">
+<kw name="Click music" library="commonKeyword">
 <kw name="Wait Until Page Contains Element" library="AppiumLibrary">
 <arg>${lbl_music}</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" starttime="20220623 20:23:26.038" endtime="20220623 20:23:28.766"/>
+<status status="PASS" starttime="20220626 21:51:50.397" endtime="20220626 21:51:52.029"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <arg>${lbl_music}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220623 20:23:28.768" level="INFO">Clicking element 'android=UiSelector().descriptionContains("ทักครับ - Lipta Feat. GUYGEEGEE [OFFICIAL MUSIC VIDEO]")'.</msg>
-<status status="PASS" starttime="20220623 20:23:28.767" endtime="20220623 20:23:28.888"/>
+<msg timestamp="20220626 21:51:52.031" level="INFO">Clicking element 'android=UiSelector().descriptionContains("ทักครับ - Lipta Feat. GUYGEEGEE [OFFICIAL MUSIC VIDEO]")'.</msg>
+<status status="PASS" starttime="20220626 21:51:52.029" endtime="20220626 21:51:53.393"/>
 </kw>
-<status status="PASS" starttime="20220623 20:23:26.038" endtime="20220623 20:23:28.888"/>
+<status status="PASS" starttime="20220626 21:51:50.397" endtime="20220626 21:51:53.393"/>
 </kw>
-<status status="PASS" starttime="20220623 20:23:04.785" endtime="20220623 20:23:28.888"/>
+<kw name="Verify music name" library="commonKeyword">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status_ad}</var>
+<arg>Get Element Location</arg>
+<arg>${img_ad}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Get Element Location" library="AppiumLibrary">
+<arg>${img_ad}</arg>
+<doc>Get element location</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220626 21:51:54.557" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220626 21:51:53.395" endtime="20220626 21:51:54.557"/>
+</kw>
+<msg timestamp="20220626 21:51:54.557" level="FAIL">ValueError: Element locator with prefix 'xpah' is not supported</msg>
+<status status="FAIL" starttime="20220626 21:51:53.395" endtime="20220626 21:51:54.559"/>
+</kw>
+<msg timestamp="20220626 21:51:54.560" level="INFO">${status_ad} = False</msg>
+<status status="PASS" starttime="20220626 21:51:53.395" endtime="20220626 21:51:54.560"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${status_ad}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220626 21:51:54.560" endtime="20220626 21:51:54.560"/>
+</kw>
+<if>
+<branch type="IF" condition="${status_ad} == True">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Have ad</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220626 21:51:54.561" endtime="20220626 21:51:54.561"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${pnl_skip_ad}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20220626 21:51:54.561" endtime="20220626 21:51:54.561"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${pnl_skip_ad}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20220626 21:51:54.561" endtime="20220626 21:51:54.561"/>
+</kw>
+<status status="NOT RUN" starttime="20220626 21:51:54.561" endtime="20220626 21:51:54.561"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Not ad</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220626 21:51:54.561" endtime="20220626 21:51:54.562"/>
+</kw>
+<status status="PASS" starttime="20220626 21:51:54.561" endtime="20220626 21:51:54.562"/>
+</branch>
+<status status="PASS" starttime="20220626 21:51:54.561" endtime="20220626 21:51:54.562"/>
+</if>
+<status status="PASS" starttime="20220626 21:51:53.394" endtime="20220626 21:51:54.562"/>
+</kw>
+<kw name="Verify ui on page play music [EN]" library="commonKeyword">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${pnl_onload}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220626 21:51:54.562" endtime="20220626 21:51:55.347"/>
+</kw>
+<kw name="Get Element Location" library="AppiumLibrary">
+<arg>${icn_like}</arg>
+<doc>Get element location</doc>
+<msg timestamp="20220626 21:51:55.813" level="INFO">Element 'Xpath=//android.view.ViewGroup[1]/android.view.ViewGroup' location: {'x': 0, 'y': 171} </msg>
+<status status="PASS" starttime="20220626 21:51:55.347" endtime="20220626 21:51:55.813"/>
+</kw>
+<kw name="Get Element Location" library="AppiumLibrary">
+<arg>${icn_dislike}</arg>
+<doc>Get element location</doc>
+<msg timestamp="20220626 21:51:56.809" level="INFO">Element 'Xpath=//android.view.ViewGroup[2]/android.view.ViewGroup' location: {'x': 359, 'y': 1135} </msg>
+<status status="PASS" starttime="20220626 21:51:55.813" endtime="20220626 21:51:56.810"/>
+</kw>
+<kw name="Get Element Location" library="AppiumLibrary">
+<arg>${icn_livechat}</arg>
+<doc>Get element location</doc>
+<msg timestamp="20220626 21:51:56.874" level="INFO">Element 'Xpath=//android.view.ViewGroup[3]/android.view.ViewGroup' location: {'x': 414, 'y': 1182} </msg>
+<status status="PASS" starttime="20220626 21:51:56.810" endtime="20220626 21:51:56.874"/>
+</kw>
+<kw name="Get Element Location" library="AppiumLibrary">
+<arg>${icn_share}</arg>
+<doc>Get element location</doc>
+<msg timestamp="20220626 21:51:56.939" level="INFO">Element 'Xpath=//android.view.ViewGroup[4]/android.view.ViewGroup' location: {'x': 607, 'y': 1182} </msg>
+<status status="PASS" starttime="20220626 21:51:56.875" endtime="20220626 21:51:56.939"/>
+</kw>
+<kw name="Get Element Location" library="AppiumLibrary">
+<arg>${icn_create}</arg>
+<doc>Get element location</doc>
+<msg timestamp="20220626 21:51:57.011" level="INFO">Element 'Xpath=//android.view.ViewGroup[5]/android.view.ViewGroup' location: {'x': 800, 'y': 1182} </msg>
+<status status="PASS" starttime="20220626 21:51:56.940" endtime="20220626 21:51:57.011"/>
+</kw>
+<kw name="Get Element Location" library="AppiumLibrary">
+<arg>${icn_dowload}</arg>
+<doc>Get element location</doc>
+<msg timestamp="20220626 21:51:57.093" level="INFO">Element 'Xpath=//android.view.ViewGroup[6]/android.view.ViewGroup' location: {'x': 993, 'y': 1182} </msg>
+<status status="PASS" starttime="20220626 21:51:57.011" endtime="20220626 21:51:57.093"/>
+</kw>
+<status status="PASS" starttime="20220626 21:51:54.562" endtime="20220626 21:51:57.093"/>
+</kw>
+<status status="PASS" starttime="20220626 21:51:28.516" endtime="20220626 21:51:57.094"/>
 </test>
-<status status="PASS" starttime="20220623 20:23:04.579" endtime="20220623 20:23:28.890"/>
+<status status="PASS" starttime="20220626 21:51:28.280" endtime="20220626 21:51:57.095"/>
 </suite>
 <statistics>
 <total>

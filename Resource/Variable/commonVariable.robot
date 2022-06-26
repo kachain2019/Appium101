@@ -1,9 +1,8 @@
 *** Variables ***
 ${REMOTE_URL}     http://localhost:4723/wd/hub
 ${PLATFORM_NAME_ANDROID}    Android
-${DEVICE_NAME_ANDROID}    e729e72b
+${DEVICE_NAME_ANDROID}    emulator-5554
 ${APP_PACKAGE}    com.google.android.youtube
 ${AUTOMATION_NAME}    appium
 ${MAIN_ACTIVITY}    com.google.android.apps.youtube.app.watchwhile.WatchWhileActivity
-${music}       ทักครับ
-${verify_name}     ทักครับ - Lipta Feat. GUYGEEGEE [OFFICIAL MUSIC VIDEO]
+${music_name}       ทักครับ - Lipta Feat. GUYGEEGEE [OFFICIAL MUSIC VIDEO]
