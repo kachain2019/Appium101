@@ -3,7 +3,7 @@ ${icn_search}           Xpath=//*[@resource-id="com.google.android.youtube:id/me
 ${txt_search}           Xpath=//*[@resource-id="com.google.android.youtube:id/search_edit_text"]
 ${lbl_music}            android=UiSelector().descriptionContains("ทักครับ - Lipta Feat. GUYGEEGEE [OFFICIAL MUSIC VIDEO]")
 ${lbl_select_music}     Xpath=//android.widget.LinearLayout[1]
-${img_ad}           Xpah=//android.widget.LinearLayout/android.widget.ImageView[@resource-id="com.google.android.youtube:id/content_thumbnail"]
+${img_ad}           Xpath=//android.widget.LinearLayout/android.widget.ImageView[@resource-id="com.google.android.youtube:id/content_thumbnail"]
 ${pnl_ad}           Xpath=//android.widget.LinearLayout[@resource-id="com.google.android.youtube:id/countdown_text"]
 ${icn_close_ad}     Xpath=//android.widget.FrameLayout/android.view.ViewGroup[1]
 ${pnl_skip_ad}      Xpath=//android.widget.FrameLayout[@resource-id="com.google.android.youtube:id/skip_ad_button"]
