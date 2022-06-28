@@ -1,5 +1,4 @@
 *** Variable ***
-*** Variable ***
 @{list_mnu_th}      ONE COOL COOL     จัดการบัญชี Google    ช่องของคุณ
                     ...   เปิดโหมดไม่ระบุตัวตน    เพิ่มบัญชี
                     ...   สมัคร YouTube Premium    การซื้อและการเป็นสมาชิก
