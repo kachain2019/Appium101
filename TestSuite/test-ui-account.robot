@@ -6,4 +6,4 @@ Resource          ${CURDIR}/../Resource/Keyword/commonKeyword.robot
 TC1 - Verify play music is correct
     Open application youtube on android
     Go to ui youtube account page
-    Verify name ui youtube account [EN] page
+    Verify name ui youtube account page
