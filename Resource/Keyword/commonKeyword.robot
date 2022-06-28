@@ -73,23 +73,20 @@ Verify menu name ui youtube account page
     [Arguments]     ${list_mnu_name}
     Element Text Should Be      ${mnu_youtube_name}      ${list_mnu_name}[0]
     Element Text Should Be      ${mnu_manage_account}    ${list_mnu_name}[1]
+    Capture Page Screenshot     ${OUTPUTDIR}/CaptureScreens/profile1.png
+    Swipe By Percent      50   90   50   10
     FOR    ${i}     ${name}    IN ENUMERATE   @{list_mnu_name}
-        Log To Console    ${i} : ${name}
-        Wait Until Page Contains Element         Xpath=//*[@resource-id="com.google.android.youtube:id/list"]
+        Log To Console    ${i+2} : ${list_mnu_name}[${i+2}]
         Element Text Should Be      Xpath=//android.widget.LinearLayout[${i+2}]/android.widget.RelativeLayout/android.widget.TextView       ${list_mnu_name}[${i+2}]                
         ${i}    Set Variable    ${i+1}
-        Exit For Loop IF    ${i} == ${11}
+        Exit For Loop IF    ${i} == ${12}
     END
-    Capture Page Screenshot     ${OUTPUTDIR}/CaptureScreens/profile1.png
+    Capture Page Screenshot     ${OUTPUTDIR}/CaptureScreens/profile2.png
     Element Text Should Be      ${mnu_privacy_policy}        ${list_mnu_name}[14]
     Element Text Should Be      ${mnu_terms_of_service}      ${list_mnu_name}[15]  
-    # Swipe      0   100   0   100
-    # Scroll Down        Xpath=//android.widget.LinearLayout[12]/android.widget.RelativeLayout/android.widget.TextView
-    # Element Text Should Be      ${mnu_youtube_kids}          YouTube Kids    
-    # Capture Page Screenshot     ${OUTPUTDIR}/CaptureScreens/profile2.png
-    # Click Element       ${btn_close}
+    Click Element       ${btn_close}
 
-Verify ui on page play music [EN]
+Verify ui on page play music
     Wait Until Page Contains Element    ${pnl_onload}
     # Get Element Attribute      Xpath=//android.view.ViewGroup[1]/android.view.ViewGroup        content-desc
     Page Should Contain Element      ${icn_like}
@@ -98,9 +95,13 @@ Verify ui on page play music [EN]
     Page Should Contain Element      ${icn_share}
     Page Should Contain Element      ${icn_create}
     Page Should Contain Element      ${icn_dowload}
+    Capture Page Screenshot   ${OUTPUTDIR}/CaptureScreens/ShowMusic1.png
+    Swipe By Percent	90	50	10	50	# Swipes screen from right to left.
+    Page Should Contain Element      ${icn_clip}
+    Page Should Contain Element      ${icn_save}
     Page Should Contain Element      ${icn_profile}
     Page Should Contain Element      ${txt_subscribe}
     Page Should Contain Element      ${icn_explan_comments}
     Page Should Not Contain Element         ${icn_pause_music}
     # Element Attribute Should Match    Xpath=//android.view.ViewGroup[3]/android.view.ViewGroup/android.view.ViewGroup       content-desc      Subscribe to LIPTAofficial.
-    Capture Page Screenshot   ${OUTPUTDIR}/CaptureScreens/ShowMusic.png
+    Capture Page Screenshot   ${OUTPUTDIR}/CaptureScreens/ShowMusic2.png

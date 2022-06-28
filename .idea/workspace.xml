@@ -8,12 +8,14 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/Keyword/commonKeyword.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/commonKeyword.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/Repository/commonRepository.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Repository/commonRepository.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/Variable/commonVariable.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Variable/commonVariable.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSuite/CaptureScreens/AdMusic.png" beforeDir="false" afterPath="$PROJECT_DIR$/TestSuite/CaptureScreens/AdMusic.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSuite/CaptureScreens/Home.png" beforeDir="false" afterPath="$PROJECT_DIR$/TestSuite/CaptureScreens/Home.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSuite/CaptureScreens/SearchMusic.png" beforeDir="false" afterPath="$PROJECT_DIR$/TestSuite/CaptureScreens/SearchMusic.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSuite/CaptureScreens/ShowMusic.png" beforeDir="false" afterPath="$PROJECT_DIR$/TestSuite/CaptureScreens/ShowMusic.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSuite/CaptureScreens/profile.png" beforeDir="false" afterPath="$PROJECT_DIR$/TestSuite/CaptureScreens/profile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestSuite/CaptureScreens/AdMusic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestSuite/CaptureScreens/Home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestSuite/CaptureScreens/SearchMusic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestSuite/CaptureScreens/ShowMusic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestSuite/CaptureScreens/profile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestSuite/CaptureScreens/profile1.png" beforeDir="false" afterPath="$PROJECT_DIR$/TestSuite/CaptureScreens/profile1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestSuite/appium-screenshot-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/TestSuite/appium-screenshot-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestSuite/appium-screenshot-2.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestSuite/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/TestSuite/log.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestSuite/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TestSuite/output.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestSuite/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/TestSuite/report.html" afterDir="false" />
