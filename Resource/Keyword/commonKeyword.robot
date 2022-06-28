@@ -28,10 +28,6 @@ Click music
      Click Element       ${lbl_music}
 
 Verify music name
-    # Wait Until Element Is Visible        ${lbl_name_music}
-    # ${title_music}      Get WebElement 	      ${lbl_name_music}
-    # Log To Console      ${title_music}    
-    # Element Text Should Be      ${lbl_name_music}       ${music_name}
     ${status_ad}     Run Keyword And Return Status     Wait Until Element Is Visible       ${img_ad}
     Log To Console      ${status_ad}
     IF  '${status_ad}' == 'True'
@@ -105,3 +101,5 @@ Verify ui on page play music
     Page Should Not Contain Element         ${icn_pause_music}
     # Element Attribute Should Match    Xpath=//android.view.ViewGroup[3]/android.view.ViewGroup/android.view.ViewGroup       content-desc      Subscribe to LIPTAofficial.
     Capture Page Screenshot   ${OUTPUTDIR}/CaptureScreens/ShowMusic2.png
+    Swipe By Percent      50   75   50   25
+    Capture Page Screenshot   ${OUTPUTDIR}/CaptureScreens/ShowMusic3.png
