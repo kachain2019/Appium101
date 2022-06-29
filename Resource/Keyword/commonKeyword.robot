@@ -2,7 +2,6 @@
 Library           AppiumLibrary
 Resource          ${CURDIR}/../../Resource/Repository/commonRepository.robot
 Resource          ${CURDIR}/../../Resource/Variable/commonVariable.robot
-# Resource          ${CURDIR}/../../Resource/Variable/commonVariable.robot
 
 *** Keywords ***
 Open application youtube on android
@@ -77,12 +76,12 @@ Verify menu name ui youtube account page
         ${i}    Set Variable    ${i+1}
         Exit For Loop IF    ${i} == ${12}
     END
-    Capture Page Screenshot     ${OUTPUTDIR}/CaptureScreens/profile2.png
+    Capture Page Screenshot     ${OUTPUTDIR}/CaptureScreens/profile2.png 
     Element Text Should Be      ${mnu_privacy_policy}        ${list_mnu_name}[14]
-    Element Text Should Be      ${mnu_terms_of_service}      ${list_mnu_name}[15]  
+    Element Text Should Be      ${mnu_terms_of_service}      ${list_mnu_name}[15]
     Click Element       ${btn_close}
 
-Verify ui on page play music
+Verify icon on page play music
     Wait Until Page Contains Element    ${pnl_onload}
     # Get Element Attribute      Xpath=//android.view.ViewGroup[1]/android.view.ViewGroup        content-desc
     Page Should Contain Element      ${icn_like}
@@ -103,3 +102,14 @@ Verify ui on page play music
     Capture Page Screenshot   ${OUTPUTDIR}/CaptureScreens/ShowMusic2.png
     Swipe By Percent      50   75   50   25
     Capture Page Screenshot   ${OUTPUTDIR}/CaptureScreens/ShowMusic3.png
+
+Verify name on page play music
+    [Arguments]    ${list_content_desc}
+    FOR    ${i}    ${value}    IN ENUMERATE   @{list_content_desc}
+        ${data}     Get Element Attribute        Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${i+1}]/android.view.ViewGroup/android.view.ViewGroup       content-desc
+        Log To Console    ${data} == ${value}
+        Should Contain     ${data}     ${value}
+        ${i}    Set Variable    ${i+1}
+        Exit For Loop IF    ${i} == ${5}
+    END
+    Swipe By Percent	90	50	10	50

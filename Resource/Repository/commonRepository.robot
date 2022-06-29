@@ -5,6 +5,7 @@ ${lbl_music}            android=UiSelector().descriptionContains("ทักค�
 ${lbl_select_music}     Xpath=//android.widget.LinearLayout[1]
 ${img_ad}           Xpath=//android.widget.LinearLayout/android.widget.ImageView[@resource-id="com.google.android.youtube:id/content_thumbnail"]
 ${pnl_ad}           Xpath=//android.widget.LinearLayout[@resource-id="com.google.android.youtube:id/countdown_text"]
+${pnl_ad_progress_bar}     Xpath=//android.widget.RelativeLayout[2]/android.widget.LinearLayout[1]/android.widget.TextView[@resource-id="com.google.android.youtube:id/ad_progress_tex"]
 ${icn_close_ad}     Xpath=//android.widget.FrameLayout/android.view.ViewGroup[1]
 ${pnl_skip_ad}      Xpath=//android.widget.FrameLayout[@resource-id="com.google.android.youtube:id/skip_ad_button"]
 # ${lbl_name_music}       Xpath=//android.widget.TextView[@resource-id="com.google.android.youtube:id/title"]
@@ -16,7 +17,7 @@ ${icn_account}          Xpath=//android.widget.FrameLayout/android.widget.ImageV
 
 #  -- locator profile --
 ${pnl_content}              Xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]
-${btn_close}        Xpath=//android.widget.ImageButton[@content-desc="Close"]
+${btn_close}        Xpath=//android.view.ViewGroup/android.widget.ImageButton
 ${mnu_youtube_name}      Xpath=//android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.Button
 ${mnu_manage_account}      //android.widget.Button[@resource-id="com.google.android.youtube:id/manage_account"]
 ${mnu_your_channal}         Xpath=//android.widget.LinearLayout[2]/android.widget.RelativeLayout/android.widget.TextView
@@ -49,7 +50,6 @@ ${icn_help_and_feedback}       Xpath=//android.widget.LinearLayout[10]/android.w
 ${icn_youTube_studio}       Xpath=//android.widget.LinearLayout[11]/android.widget.ImageView[@resource-id="com.google.android.youtube:id/thumbnail"]
 ${icn_youtube_music}       Xpath=//android.widget.LinearLayout[12]/android.widget.ImageView[@resource-id="com.google.android.youtube:id/thumbnail"]
 ${icn_youtube_kids}       Xpath=//android.widget.LinearLayout[13]/android.widget.ImageView[@resource-id="com.google.android.youtube:id/thumbnail"]
-
 # ${mnu_youtube_name}           Xpath=//android.widget.LinearLayout[@resource-id="com.google.android.youtube:id/signed_in_view"]
 
 # -- locator music ---
@@ -67,11 +67,3 @@ ${txt_subscribe}     Xpath=//android.view.ViewGroup[3]/android.view.ViewGroup/an
 ${icn_explan_comments}    Xpath=//android.view.ViewGroup[4]/android.view.ViewGroup/android.widget.ImageView[1]
 ${icn_pause_music}      Xpath=//android.widget.ImageView[@resource-id="com.google.android.youtube:id/player_control_play_pause_replay_button"]
 # ${icn_profile_comments}    Xpath=//android.view.ViewGroup[4]/android.view.ViewGroup/android.widget.ImageView[2]
-
-
-# icn_search
-# xpath ปรับด้วย
-#การบ้าน
-#1. เช็ค Element หน้าเพจ account
-#2. ปรับ xpath ให้อ่านง่าย
-#3. เช็ค Element หน้าจอเพลง

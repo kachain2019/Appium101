@@ -1,5 +1,5 @@
 *** Variable ***
-@{list_mnu_en}      ONE COOL COOL     Manage your Google Account    Your channel
+@{list_mnu_account_en}      ONE COOL COOL     Manage your Google Account    Your channel
                     ...   Turn on Incognito    Add account
                     ...   Get YouTube Premium    Purchases and memberships
                     ...   Time watched     Your data in YouTube
