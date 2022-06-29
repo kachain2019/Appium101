@@ -27,21 +27,46 @@ Click music
      Click Element       ${lbl_music}
 
 Verify music name
+    # ${status_ad}     Run Keyword And Return Status     Wait Until Element Is Visible       ${img_ad}
+    # Log To Console      ${status_ad}
+    # IF  '${status_ad}' == 'True'
+    #     Log To Console   Have Ad
+    #     Capture Page Screenshot   ${OUTPUTDIR}/CaptureScreens/AdMusic.png
+    #     ${status_skip_ad}     Run Keyword And Return Status     Wait Until Element Is Visible       ${pnl_skip_ad}
+    #     IF  '${status_skip_ad}' == 'True'
+    #         Click Element       ${pnl_skip_ad}
+    #     ELSE
+    #         Wait Until Element Is Visible       ${img_ad}
+    #         Click Element       ${img_ad}
+    #     END
+    # ELSE
+    #     Log To Console     Not Ad
+    # END
+
     ${status_ad}     Run Keyword And Return Status     Wait Until Element Is Visible       ${img_ad}
     Log To Console      ${status_ad}
     IF  '${status_ad}' == 'True'
         Log To Console   Have Ad
         Capture Page Screenshot   ${OUTPUTDIR}/CaptureScreens/AdMusic.png
-        ${status_skip_ad}     Run Keyword And Return Status     Wait Until Element Is Visible       ${pnl_skip_ad}
-        IF  '${status_skip_ad}' == 'True'
-            Click Element       ${pnl_skip_ad}
-        ELSE
+        ${status_ad}     Run Keyword And Return Status      Wait Until Element Is Visible       ${pnl_skip_ad}
+        ${click_skip_ad}     Run Keyword And Return Status     Click Element       ${pnl_skip_ad}
+        IF  '${click_skip_ad}' == 'True' and '${click_skip_ad}' == 'True'
+            Log To Console     click skip ad
+        ELSE IF   '${click_skip_ad}' == 'False'
             Wait Until Element Is Visible       ${img_ad}
-            Click Element       ${img_ad}
+            ${status_click_thumnail}     Run Keyword And Return Status     Click Element       ${img_ad}
+            IF  '${click_skip_ad}' == 'True'
+                Log To Console     Click thumbnail
+            ELSE
+                Log To Console     VDO Playing
+            END
         END
     ELSE
         Log To Console     Not Ad
     END
+
+
+    # Xpath=//android.widget.LinearLayout[@resource-id="com.google.android.youtube:id/countdown_text"]
 
 Go to ui youtube account page
     Wait Until Page Contains Element    ${icn_account} 
@@ -113,3 +138,13 @@ Verify name on page play music
         Exit For Loop IF    ${i} == ${5}
     END
     Swipe By Percent	90	50	10	50
+    ${lenList}      Get Length     ${list_content_desc} 
+    Log To Console      ${lenList}
+    FOR    ${i}    ${value}    IN ENUMERATE   @{list_content_desc}
+        ${data}     Get Element Attribute        Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${lenList-2}]/android.view.ViewGroup/android.view.ViewGroup       content-desc
+        Log To Console    ${data} : ${list_content_desc}[${lenList-1}]
+        Should Contain     ${data}      ${list_content_desc}[${lenList-1}]
+        ${lenList}    Set Variable    ${lenList-1}
+        Exit For Loop IF    ${lenList} == ${2}
+    END
+
