@@ -15,4 +15,4 @@ TC1 - Verify play music is correct
     Click music
     Verify music name
     # Verify icon on page play music
-    # Verify name on page play music        ${list_content_desc_th}
+    Verify name on page play music        ${list_content_desc_en}

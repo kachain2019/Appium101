@@ -1,7 +1,7 @@
 *** Variable ***
 ${icn_search}           Xpath=//*[@resource-id="com.google.android.youtube:id/menu_item_1"]
 ${txt_search}           Xpath=//*[@resource-id="com.google.android.youtube:id/search_edit_text"]
-${lbl_music}            android=UiSelector().descriptionContains("ทักครับ - Lipta Feat. GUYGEEGEE [OFFICIAL MUSIC VIDEO]")
+${lbl_music}            android=UiSelector().descriptionContains("${music_name}")
 ${lbl_select_music}     Xpath=//android.widget.LinearLayout[1]
 ${img_ad}           Xpath=//android.widget.LinearLayout/android.widget.ImageView[@resource-id="com.google.android.youtube:id/content_thumbnail"]
 ${pnl_ad}           Xpath=//android.widget.LinearLayout[@resource-id="com.google.android.youtube:id/countdown_text"]
