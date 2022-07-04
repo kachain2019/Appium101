@@ -1,5 +1,6 @@
 *** Settings ***
 Library           AppiumLibrary
+Library           Collections
 Resource          ${CURDIR}/../../Resource/Repository/commonRepository.robot
 Resource          ${CURDIR}/../../Resource/Variable/commonVariable.robot
 
@@ -58,13 +59,19 @@ Verify music name
             IF  '${click_skip_ad}' == 'True'
                 Log To Console     Click thumbnail
             ELSE
-                ${status}    Run Keyword And Return Status     Page Should Not Contain Element      ${img_ad}
-                Log To Console     ${status} : VDO Playing1
+                ${status}    Run Keyword And Return Status     Page Should Contain Element      ${pnl_skip_ad}
+                IF  '${click_skip_ad}' == 'True'
+                    Click Element       ${pnl_skip_ad}
+                    Log To Console     1 : VDO Playing1
+                ELSE
+                    ${status}    Run Keyword And Return Status    Page Should Not Contain Element      ${img_ad}
+                    Log To Console     2 : VDO Playing1
+                END
             END  
         ELSE
-            ${status_click_thumnail}     Run Keyword And Return Status     Click Element       ${img_ad}
+            ${status_click_thumnail}     Run Keyword And Return Status     Click Element       ${pnl_skip_ad}
             IF  '${click_skip_ad}' == 'True'
-                Log To Console     Click thumbnail
+                Log To Console     Click skip ad2
             ELSE
                 ${status}    Run Keyword And Return Status     Page Should Not Contain Element      ${img_ad}
                 Log To Console     ${status} : VDO Playing2
@@ -116,83 +123,46 @@ Verify menu name ui youtube account page
     Click Element       ${btn_close}
 
 Verify icon on page play music
+    [Arguments]    ${list_content_desc}
     Wait Until Page Contains Element    ${pnl_onload}
-    # Get Element Attribute      Xpath=//android.view.ViewGroup[1]/android.view.ViewGroup        content-desc
-    Page Should Contain Element      ${icn_like}
-    Page Should Contain Element      ${icn_dislike}
-    Page Should Contain Element      ${icn_livechat}
-    Page Should Contain Element      ${icn_share}
-    Page Should Contain Element      ${icn_create}
-    Page Should Contain Element      ${icn_dowload}
-    Capture Page Screenshot   ${OUTPUTDIR}/CaptureScreens/ShowMusic1.png
-    Swipe By Percent	90	50	10	50	# Swipes screen from right to left.
-    Page Should Contain Element      ${icn_clip}
-    Page Should Contain Element      ${icn_save}
-    Page Should Contain Element      ${icn_profile}
-    Page Should Contain Element      ${txt_subscribe}
-    Page Should Contain Element      ${icn_explan_comments}
-    Page Should Not Contain Element         ${icn_pause_music}
-    # Element Attribute Should Match    Xpath=//android.view.ViewGroup[3]/android.view.ViewGroup/android.view.ViewGroup       content-desc      Subscribe to LIPTAofficial.
-    Capture Page Screenshot   ${OUTPUTDIR}/CaptureScreens/ShowMusic2.png
-    Swipe By Percent      50   75   50   25
-    Capture Page Screenshot   ${OUTPUTDIR}/CaptureScreens/ShowMusic3.png
-    
-    # Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${i+1}]/android.view.ViewGroup/android.view.ViewGroup/       content-desc
-
+    FOR    ${i}    ${value}    IN ENUMERATE   @{list_content_desc}
+        Page Should Contain Element       Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${i+1}]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "${value}")]/android.widget.ImageView
+        ${i}    Set Variable    ${i+1}
+        Exit For Loop IF    ${i} == ${6}
+    END   
+    Swipe By Percent	90	50	10	50
+    ${len}      Get Length     ${list_content_desc} 
+    Log To Console      ${len}
+    FOR    ${i}    ${value}    IN ENUMERATE   @{list_content_desc}
+        Page Should Contain Element        Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${len-2}]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "${list_content_desc}[${len-1}]")]/android.widget.ImageView
+        ${len}    Set Variable    ${len-1}
+        Exit For Loop IF    ${len} == ${2}
+    END
 
 Verify name on page play music
     [Arguments]    ${list_content_desc}
-    ${status}    Run Keyword And Return Status       Element Attribute Should Match      Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[3]/android.view.ViewGroup/android.view.ViewGroup        content-desc       *${list_content_desc}[2]* 
-    Log To Console     ${status}
-    IF  '${status}' == 'True'
-        FOR    ${i}    ${value}    IN ENUMERATE   @{list_content_desc}
-            ${data}     Get Element Attribute        Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${i+1}]/android.view.ViewGroup/android.view.ViewGroup       content-desc
-            Log To Console    ${data} == ${value}
-            Should Contain     ${data}     ${value}
-            ${i}    Set Variable    ${i+1}
-            Exit For Loop IF    ${i} == ${6}
-        END
-    ELSE
-        ${len}      Set Variable       ${0}
-        FOR    ${i}    ${value}    IN ENUMERATE   @{list_content_desc}
-            ${data}     Get Element Attribute        Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${i+1}]/android.view.ViewGroup/android.view.ViewGroup       content-desc
-            Log To Console    ${data} == ${list_content_desc}[${len}]
-            Should Contain     ${data}     ${list_content_desc}[${len}]
-            ${i}    Set Variable    ${i+1}
-            ${len}    Set Variable    ${len+1}
-            IF   ${len} == ${2}     
-                 ${len}    Set Variable    ${len+1}
-            END
-            Exit For Loop IF    ${i} == ${6}
-        END
-
+    Swipe By Percent	10	50	90	50	
+    FOR    ${i}    ${value}    IN ENUMERATE   @{list_content_desc}
+        ${data}     Get Element Attribute        Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${i+1}]/android.view.ViewGroup/android.view.ViewGroup       content-desc
+        Log To Console    ${data} == ${value}
+        Should Contain     ${data}     ${value}
+        ${i}    Set Variable    ${i+1}
+        Exit For Loop IF    ${i} == ${6}
     END
-
-
-
-    # FOR    ${i}    ${value}    IN ENUMERATE   @{list_content_desc}
-    #     ${data}     Get Element Attribute        Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${i+1}]/android.view.ViewGroup/android.view.ViewGroup       content-desc
-    #     Log To Console    ${data} == ${value}
-    #     Should Contain     ${data}     ${value}
-    #     ${i}    Set Variable    ${i+1}
-    #     Exit For Loop IF    ${i} == ${6}
-    # END
 
     # FOR    ${i}    ${value}    IN ENUMERATE   @{list_content_desc}
     #     Element Attribute Should Match      Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${i+1}]/android.view.ViewGroup/android.view.ViewGroup        content-desc       *${value}* 
     #     ${i}    Set Variable    ${i+1}
     #     Exit For Loop IF    ${i} == ${5}
     # END
-
-    # Swipe By Percent	90	50	10	50
-    # Page Should Contain Element     ${pnl_onload}
-    # ${lenList}      Get Length     ${list_content_desc} 
-    # Log To Console      ${lenList}
-    # FOR    ${i}    ${value}    IN ENUMERATE   @{list_content_desc}
-    #     ${data}     Get Element Attribute        Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${lenList-2}]/android.view.ViewGroup/android.view.ViewGroup       content-desc
-    #     Log To Console    ${data} : ${list_content_desc}[${lenList-1}]
-    #     Should Contain     ${data}      ${list_content_desc}[${lenList-1}]
-    #     ${lenList}    Set Variable    ${lenList-1}
-    #     Exit For Loop IF    ${lenList} == ${2}
-    # END
-
+    Swipe By Percent	90	50	10	50
+    ${len}      Get Length     ${list_content_desc} 
+    Log To Console      ----------- ${len} -----------
+    FOR    ${i}    ${value}    IN ENUMERATE   @{list_content_desc}
+        ${data}     Get Element Attribute        Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${len-2}]/android.view.ViewGroup/android.view.ViewGroup       content-desc
+        Log To Console    ${data} : ${list_content_desc}[${len-1}]
+        Should Contain     ${data}      ${list_content_desc}[${len-1}]
+        ${len}    Set Variable    ${len-1}
+        Exit For Loop IF    ${len} == ${2}
+    END
+    Swipe By Percent      50   75   50   25
