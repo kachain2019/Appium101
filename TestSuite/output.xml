@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220704 14:58:14.321" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220704 17:03:32.535" rpa="false" schemaversion="3">
 <suite id="s1" name="Test" source="C:\Users\kachain3099\Desktop\RBFW_appium\APPIUM_101\Appium101\TestSuite\test.robot">
 <test id="s1-t1" name="TC1 - Verify play music is correct" line="8">
 <kw name="Open application youtube on android" library="commonKeyword">
@@ -15,68 +15,588 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | *Option*            | *Man.* | *Description*     |
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |</doc>
-<status status="PASS" starttime="20220704 14:58:15.606" endtime="20220704 14:58:39.904"/>
+<status status="PASS" starttime="20220704 17:03:32.791" endtime="20220704 17:03:42.508"/>
 </kw>
 <kw name="Start Screen Recording" library="AppiumLibrary">
 <doc>Starts an asynchronous Screen Recording for the current open application.</doc>
-<status status="PASS" starttime="20220704 14:58:39.905" endtime="20220704 14:58:40.899"/>
+<status status="PASS" starttime="20220704 17:03:42.508" endtime="20220704 17:03:43.198"/>
 </kw>
-<status status="PASS" starttime="20220704 14:58:15.603" endtime="20220704 14:58:40.900"/>
+<status status="PASS" starttime="20220704 17:03:32.790" endtime="20220704 17:03:43.198"/>
+</kw>
+<kw name="Go to ui youtube account page" library="commonKeyword">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${icn_account}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220704 17:03:43.199" endtime="20220704 17:03:45.696"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${icn_account}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220704 17:03:45.699" level="INFO">Clicking element 'Xpath=//android.widget.FrameLayout/android.widget.ImageView[@resource-id="com.google.android.youtube:id/image"]'.</msg>
+<status status="PASS" starttime="20220704 17:03:45.697" endtime="20220704 17:03:46.165"/>
+</kw>
+<status status="PASS" starttime="20220704 17:03:43.198" endtime="20220704 17:03:46.165"/>
+</kw>
+<kw name="Verify icon ui youtube account page" library="commonKeyword">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${pnl_content}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220704 17:03:46.166" endtime="20220704 17:03:47.154"/>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<arg>${icn_switch_accounts}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<msg timestamp="20220704 17:03:47.240" level="INFO">Current page contains element 'Xpath=//android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.ImageView[@resource-id="com.google.android.youtube:id/switch_account"]'.</msg>
+<status status="PASS" starttime="20220704 17:03:47.154" endtime="20220704 17:03:47.240"/>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<arg>${icn_account_channel}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<msg timestamp="20220704 17:03:47.318" level="INFO">Current page contains element 'Xpath=//android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.ImageView[@resource-id="com.google.android.youtube:id/account_thumbnail"]'.</msg>
+<status status="PASS" starttime="20220704 17:03:47.240" endtime="20220704 17:03:47.318"/>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<arg>${icn_your_channel}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<msg timestamp="20220704 17:03:47.399" level="INFO">Current page contains element 'Xpath=//android.widget.LinearLayout[2]/android.widget.ImageView[@resource-id="com.google.android.youtube:id/thumbnail"]'.</msg>
+<status status="PASS" starttime="20220704 17:03:47.318" endtime="20220704 17:03:47.399"/>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<arg>${icn_turn_on}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<msg timestamp="20220704 17:03:47.461" level="INFO">Current page contains element 'Xpath=//android.widget.LinearLayout[3]/android.widget.ImageView[@resource-id="com.google.android.youtube:id/thumbnail"]'.</msg>
+<status status="PASS" starttime="20220704 17:03:47.399" endtime="20220704 17:03:47.461"/>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<arg>${icn_add_account}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<msg timestamp="20220704 17:03:47.541" level="INFO">Current page contains element 'Xpath=//android.widget.LinearLayout[4]/android.widget.ImageView[@resource-id="com.google.android.youtube:id/thumbnail"]'.</msg>
+<status status="PASS" starttime="20220704 17:03:47.462" endtime="20220704 17:03:47.541"/>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<arg>${icn_get_youTube_premium}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<msg timestamp="20220704 17:03:47.613" level="INFO">Current page contains element 'Xpath=//android.widget.LinearLayout[5]/android.widget.ImageView[@resource-id="com.google.android.youtube:id/thumbnail"]'.</msg>
+<status status="PASS" starttime="20220704 17:03:47.541" endtime="20220704 17:03:47.614"/>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<arg>${icn_purchases_and_memberships}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<msg timestamp="20220704 17:03:47.682" level="INFO">Current page contains element 'Xpath=//android.widget.LinearLayout[6]/android.widget.ImageView[@resource-id="com.google.android.youtube:id/thumbnail"]'.</msg>
+<status status="PASS" starttime="20220704 17:03:47.614" endtime="20220704 17:03:47.682"/>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<arg>${icn_time_watched}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<msg timestamp="20220704 17:03:47.747" level="INFO">Current page contains element 'Xpath=//android.widget.LinearLayout[7]/android.widget.ImageView[@resource-id="com.google.android.youtube:id/thumbnail"]'.</msg>
+<status status="PASS" starttime="20220704 17:03:47.682" endtime="20220704 17:03:47.747"/>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<arg>${icn_your_data_in_youTube}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<msg timestamp="20220704 17:03:47.806" level="INFO">Current page contains element 'Xpath=//android.widget.LinearLayout[8]/android.widget.ImageView[@resource-id="com.google.android.youtube:id/thumbnail"]'.</msg>
+<status status="PASS" starttime="20220704 17:03:47.747" endtime="20220704 17:03:47.807"/>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<arg>${icn_settings}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<msg timestamp="20220704 17:03:47.901" level="INFO">Current page contains element 'Xpath=//android.widget.LinearLayout[9]/android.widget.ImageView[@resource-id="com.google.android.youtube:id/thumbnail"]'.</msg>
+<status status="PASS" starttime="20220704 17:03:47.807" endtime="20220704 17:03:47.901"/>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<arg>${icn_help_and_feedback}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<msg timestamp="20220704 17:03:47.963" level="INFO">Current page contains element 'Xpath=//android.widget.LinearLayout[10]/android.widget.ImageView[@resource-id="com.google.android.youtube:id/thumbnail"]'.</msg>
+<status status="PASS" starttime="20220704 17:03:47.901" endtime="20220704 17:03:47.963"/>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<arg>${icn_youTube_studio}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<msg timestamp="20220704 17:03:48.022" level="INFO">Current page contains element 'Xpath=//android.widget.LinearLayout[11]/android.widget.ImageView[@resource-id="com.google.android.youtube:id/thumbnail"]'.</msg>
+<status status="PASS" starttime="20220704 17:03:47.963" endtime="20220704 17:03:48.023"/>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<arg>${icn_youtube_music}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<msg timestamp="20220704 17:03:48.091" level="INFO">Current page contains element 'Xpath=//android.widget.LinearLayout[12]/android.widget.ImageView[@resource-id="com.google.android.youtube:id/thumbnail"]'.</msg>
+<status status="PASS" starttime="20220704 17:03:48.023" endtime="20220704 17:03:48.091"/>
+</kw>
+<status status="PASS" starttime="20220704 17:03:46.166" endtime="20220704 17:03:48.092"/>
+</kw>
+<kw name="Verify menu name ui youtube account page" library="commonKeyword">
+<arg>${list_mnu_account_en}</arg>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${mnu_youtube_name}</arg>
+<arg>${list_mnu_name}[0]</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20220704 17:03:48.096" level="INFO">Verifying element 'Xpath=//android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.Button' contains exactly text 'ONE COOL COOL'.</msg>
+<status status="PASS" starttime="20220704 17:03:48.092" endtime="20220704 17:03:48.169"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${mnu_manage_account}</arg>
+<arg>${list_mnu_name}[1]</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20220704 17:03:48.172" level="INFO">Verifying element '//android.widget.Button[@resource-id="com.google.android.youtube:id/manage_account"]' contains exactly text 'Manage your Google Account'.</msg>
+<status status="PASS" starttime="20220704 17:03:48.169" endtime="20220704 17:03:48.238"/>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<arg>${OUTPUTDIR}/CaptureScreens/profile1.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220704 17:03:48.615" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="CaptureScreens/profile1.png"&gt;&lt;img src="CaptureScreens/profile1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220704 17:03:48.238" endtime="20220704 17:03:48.615"/>
+</kw>
+<kw name="Swipe By Percent" library="AppiumLibrary">
+<arg>50</arg>
+<arg>90</arg>
+<arg>50</arg>
+<arg>10</arg>
+<doc>Swipe from one percent of the screen to another percent, for an optional duration.
+Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
+<status status="PASS" starttime="20220704 17:03:48.615" endtime="20220704 17:03:50.077"/>
+</kw>
+<for flavor="IN ENUMERATE">
+<var>${i}</var>
+<var>${name}</var>
+<value>@{list_mnu_name}</value>
+<iter>
+<var name="${i}">0</var>
+<var name="${name}">ONE COOL COOL</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i+2} : ${list_mnu_name}[${i+2}]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220704 17:03:50.077" endtime="20220704 17:03:50.079"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>Xpath=//android.widget.LinearLayout[${i+2}]/android.widget.RelativeLayout/android.widget.TextView</arg>
+<arg>${list_mnu_name}[${i+2}]</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20220704 17:03:50.083" level="INFO">Verifying element 'Xpath=//android.widget.LinearLayout[2]/android.widget.RelativeLayout/android.widget.TextView' contains exactly text 'Your channel'.</msg>
+<status status="PASS" starttime="20220704 17:03:50.079" endtime="20220704 17:03:50.161"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${i}</var>
+<arg>${i+1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220704 17:03:50.162" level="INFO">${i} = 1</msg>
+<status status="PASS" starttime="20220704 17:03:50.161" endtime="20220704 17:03:50.162"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${i} == ${12}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220704 17:03:50.162" endtime="20220704 17:03:50.163"/>
+</kw>
+<status status="PASS" starttime="20220704 17:03:50.077" endtime="20220704 17:03:50.163"/>
+</iter>
+<iter>
+<var name="${i}">1</var>
+<var name="${name}">Manage your Google Account</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i+2} : ${list_mnu_name}[${i+2}]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220704 17:03:50.163" endtime="20220704 17:03:50.164"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>Xpath=//android.widget.LinearLayout[${i+2}]/android.widget.RelativeLayout/android.widget.TextView</arg>
+<arg>${list_mnu_name}[${i+2}]</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20220704 17:03:50.168" level="INFO">Verifying element 'Xpath=//android.widget.LinearLayout[3]/android.widget.RelativeLayout/android.widget.TextView' contains exactly text 'Turn on Incognito'.</msg>
+<status status="PASS" starttime="20220704 17:03:50.165" endtime="20220704 17:03:50.232"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${i}</var>
+<arg>${i+1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220704 17:03:50.232" level="INFO">${i} = 2</msg>
+<status status="PASS" starttime="20220704 17:03:50.232" endtime="20220704 17:03:50.232"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${i} == ${12}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220704 17:03:50.233" endtime="20220704 17:03:50.233"/>
+</kw>
+<status status="PASS" starttime="20220704 17:03:50.163" endtime="20220704 17:03:50.233"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<var name="${name}">Your channel</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i+2} : ${list_mnu_name}[${i+2}]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220704 17:03:50.233" endtime="20220704 17:03:50.236"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>Xpath=//android.widget.LinearLayout[${i+2}]/android.widget.RelativeLayout/android.widget.TextView</arg>
+<arg>${list_mnu_name}[${i+2}]</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20220704 17:03:50.240" level="INFO">Verifying element 'Xpath=//android.widget.LinearLayout[4]/android.widget.RelativeLayout/android.widget.TextView' contains exactly text 'Add account'.</msg>
+<status status="PASS" starttime="20220704 17:03:50.236" endtime="20220704 17:03:50.308"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${i}</var>
+<arg>${i+1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220704 17:03:50.309" level="INFO">${i} = 3</msg>
+<status status="PASS" starttime="20220704 17:03:50.308" endtime="20220704 17:03:50.309"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${i} == ${12}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220704 17:03:50.309" endtime="20220704 17:03:50.310"/>
+</kw>
+<status status="PASS" starttime="20220704 17:03:50.233" endtime="20220704 17:03:50.310"/>
+</iter>
+<iter>
+<var name="${i}">3</var>
+<var name="${name}">Turn on Incognito</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i+2} : ${list_mnu_name}[${i+2}]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220704 17:03:50.310" endtime="20220704 17:03:50.312"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>Xpath=//android.widget.LinearLayout[${i+2}]/android.widget.RelativeLayout/android.widget.TextView</arg>
+<arg>${list_mnu_name}[${i+2}]</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20220704 17:03:50.317" level="INFO">Verifying element 'Xpath=//android.widget.LinearLayout[5]/android.widget.RelativeLayout/android.widget.TextView' contains exactly text 'Get YouTube Premium'.</msg>
+<status status="PASS" starttime="20220704 17:03:50.312" endtime="20220704 17:03:50.384"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${i}</var>
+<arg>${i+1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220704 17:03:50.385" level="INFO">${i} = 4</msg>
+<status status="PASS" starttime="20220704 17:03:50.385" endtime="20220704 17:03:50.385"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${i} == ${12}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220704 17:03:50.385" endtime="20220704 17:03:50.386"/>
+</kw>
+<status status="PASS" starttime="20220704 17:03:50.310" endtime="20220704 17:03:50.386"/>
+</iter>
+<iter>
+<var name="${i}">4</var>
+<var name="${name}">Add account</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i+2} : ${list_mnu_name}[${i+2}]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220704 17:03:50.386" endtime="20220704 17:03:50.388"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>Xpath=//android.widget.LinearLayout[${i+2}]/android.widget.RelativeLayout/android.widget.TextView</arg>
+<arg>${list_mnu_name}[${i+2}]</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20220704 17:03:50.392" level="INFO">Verifying element 'Xpath=//android.widget.LinearLayout[6]/android.widget.RelativeLayout/android.widget.TextView' contains exactly text 'Purchases and memberships'.</msg>
+<status status="PASS" starttime="20220704 17:03:50.388" endtime="20220704 17:03:50.460"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${i}</var>
+<arg>${i+1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220704 17:03:50.461" level="INFO">${i} = 5</msg>
+<status status="PASS" starttime="20220704 17:03:50.460" endtime="20220704 17:03:50.461"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${i} == ${12}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220704 17:03:50.461" endtime="20220704 17:03:50.461"/>
+</kw>
+<status status="PASS" starttime="20220704 17:03:50.386" endtime="20220704 17:03:50.461"/>
+</iter>
+<iter>
+<var name="${i}">5</var>
+<var name="${name}">Get YouTube Premium</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i+2} : ${list_mnu_name}[${i+2}]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220704 17:03:50.462" endtime="20220704 17:03:50.463"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>Xpath=//android.widget.LinearLayout[${i+2}]/android.widget.RelativeLayout/android.widget.TextView</arg>
+<arg>${list_mnu_name}[${i+2}]</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20220704 17:03:50.468" level="INFO">Verifying element 'Xpath=//android.widget.LinearLayout[7]/android.widget.RelativeLayout/android.widget.TextView' contains exactly text 'Time watched'.</msg>
+<status status="PASS" starttime="20220704 17:03:50.463" endtime="20220704 17:03:50.535"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${i}</var>
+<arg>${i+1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220704 17:03:50.536" level="INFO">${i} = 6</msg>
+<status status="PASS" starttime="20220704 17:03:50.535" endtime="20220704 17:03:50.536"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${i} == ${12}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220704 17:03:50.536" endtime="20220704 17:03:50.537"/>
+</kw>
+<status status="PASS" starttime="20220704 17:03:50.461" endtime="20220704 17:03:50.537"/>
+</iter>
+<iter>
+<var name="${i}">6</var>
+<var name="${name}">Purchases and memberships</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i+2} : ${list_mnu_name}[${i+2}]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220704 17:03:50.537" endtime="20220704 17:03:50.539"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>Xpath=//android.widget.LinearLayout[${i+2}]/android.widget.RelativeLayout/android.widget.TextView</arg>
+<arg>${list_mnu_name}[${i+2}]</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20220704 17:03:50.543" level="INFO">Verifying element 'Xpath=//android.widget.LinearLayout[8]/android.widget.RelativeLayout/android.widget.TextView' contains exactly text 'Your data in YouTube'.</msg>
+<status status="PASS" starttime="20220704 17:03:50.539" endtime="20220704 17:03:50.614"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${i}</var>
+<arg>${i+1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220704 17:03:50.615" level="INFO">${i} = 7</msg>
+<status status="PASS" starttime="20220704 17:03:50.614" endtime="20220704 17:03:50.615"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${i} == ${12}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220704 17:03:50.615" endtime="20220704 17:03:50.616"/>
+</kw>
+<status status="PASS" starttime="20220704 17:03:50.537" endtime="20220704 17:03:50.616"/>
+</iter>
+<iter>
+<var name="${i}">7</var>
+<var name="${name}">Time watched</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i+2} : ${list_mnu_name}[${i+2}]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220704 17:03:50.616" endtime="20220704 17:03:50.617"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>Xpath=//android.widget.LinearLayout[${i+2}]/android.widget.RelativeLayout/android.widget.TextView</arg>
+<arg>${list_mnu_name}[${i+2}]</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20220704 17:03:50.621" level="INFO">Verifying element 'Xpath=//android.widget.LinearLayout[9]/android.widget.RelativeLayout/android.widget.TextView' contains exactly text 'Settings'.</msg>
+<status status="PASS" starttime="20220704 17:03:50.617" endtime="20220704 17:03:50.691"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${i}</var>
+<arg>${i+1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220704 17:03:50.692" level="INFO">${i} = 8</msg>
+<status status="PASS" starttime="20220704 17:03:50.692" endtime="20220704 17:03:50.692"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${i} == ${12}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220704 17:03:50.693" endtime="20220704 17:03:50.693"/>
+</kw>
+<status status="PASS" starttime="20220704 17:03:50.616" endtime="20220704 17:03:50.693"/>
+</iter>
+<iter>
+<var name="${i}">8</var>
+<var name="${name}">Your data in YouTube</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i+2} : ${list_mnu_name}[${i+2}]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220704 17:03:50.693" endtime="20220704 17:03:50.695"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>Xpath=//android.widget.LinearLayout[${i+2}]/android.widget.RelativeLayout/android.widget.TextView</arg>
+<arg>${list_mnu_name}[${i+2}]</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20220704 17:03:50.700" level="INFO">Verifying element 'Xpath=//android.widget.LinearLayout[10]/android.widget.RelativeLayout/android.widget.TextView' contains exactly text 'Help &amp; feedback'.</msg>
+<status status="PASS" starttime="20220704 17:03:50.695" endtime="20220704 17:03:50.768"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${i}</var>
+<arg>${i+1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220704 17:03:50.769" level="INFO">${i} = 9</msg>
+<status status="PASS" starttime="20220704 17:03:50.768" endtime="20220704 17:03:50.769"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${i} == ${12}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220704 17:03:50.769" endtime="20220704 17:03:50.770"/>
+</kw>
+<status status="PASS" starttime="20220704 17:03:50.693" endtime="20220704 17:03:50.770"/>
+</iter>
+<iter>
+<var name="${i}">9</var>
+<var name="${name}">Settings</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i+2} : ${list_mnu_name}[${i+2}]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220704 17:03:50.770" endtime="20220704 17:03:50.771"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>Xpath=//android.widget.LinearLayout[${i+2}]/android.widget.RelativeLayout/android.widget.TextView</arg>
+<arg>${list_mnu_name}[${i+2}]</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20220704 17:03:50.775" level="INFO">Verifying element 'Xpath=//android.widget.LinearLayout[11]/android.widget.RelativeLayout/android.widget.TextView' contains exactly text 'YouTube Studio'.</msg>
+<status status="PASS" starttime="20220704 17:03:50.771" endtime="20220704 17:03:50.843"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${i}</var>
+<arg>${i+1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220704 17:03:50.844" level="INFO">${i} = 10</msg>
+<status status="PASS" starttime="20220704 17:03:50.843" endtime="20220704 17:03:50.844"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${i} == ${12}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220704 17:03:50.844" endtime="20220704 17:03:50.844"/>
+</kw>
+<status status="PASS" starttime="20220704 17:03:50.770" endtime="20220704 17:03:50.844"/>
+</iter>
+<iter>
+<var name="${i}">10</var>
+<var name="${name}">Help &amp; feedback</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i+2} : ${list_mnu_name}[${i+2}]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220704 17:03:50.845" endtime="20220704 17:03:50.846"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>Xpath=//android.widget.LinearLayout[${i+2}]/android.widget.RelativeLayout/android.widget.TextView</arg>
+<arg>${list_mnu_name}[${i+2}]</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20220704 17:03:50.850" level="INFO">Verifying element 'Xpath=//android.widget.LinearLayout[12]/android.widget.RelativeLayout/android.widget.TextView' contains exactly text 'YouTube Music'.</msg>
+<status status="PASS" starttime="20220704 17:03:50.846" endtime="20220704 17:03:50.919"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${i}</var>
+<arg>${i+1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220704 17:03:50.920" level="INFO">${i} = 11</msg>
+<status status="PASS" starttime="20220704 17:03:50.919" endtime="20220704 17:03:50.920"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${i} == ${12}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220704 17:03:50.920" endtime="20220704 17:03:50.921"/>
+</kw>
+<status status="PASS" starttime="20220704 17:03:50.844" endtime="20220704 17:03:50.921"/>
+</iter>
+<iter>
+<var name="${i}">11</var>
+<var name="${name}">YouTube Studio</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i+2} : ${list_mnu_name}[${i+2}]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220704 17:03:50.921" endtime="20220704 17:03:50.923"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>Xpath=//android.widget.LinearLayout[${i+2}]/android.widget.RelativeLayout/android.widget.TextView</arg>
+<arg>${list_mnu_name}[${i+2}]</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20220704 17:03:50.926" level="INFO">Verifying element 'Xpath=//android.widget.LinearLayout[13]/android.widget.RelativeLayout/android.widget.TextView' contains exactly text 'YouTube Kids'.</msg>
+<status status="PASS" starttime="20220704 17:03:50.923" endtime="20220704 17:03:51.001"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${i}</var>
+<arg>${i+1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220704 17:03:51.001" level="INFO">${i} = 12</msg>
+<status status="PASS" starttime="20220704 17:03:51.001" endtime="20220704 17:03:51.002"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${i} == ${12}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<msg timestamp="20220704 17:03:51.002" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20220704 17:03:51.002" endtime="20220704 17:03:51.003"/>
+</kw>
+<status status="PASS" starttime="20220704 17:03:50.921" endtime="20220704 17:03:51.003"/>
+</iter>
+<status status="PASS" starttime="20220704 17:03:50.077" endtime="20220704 17:03:51.003"/>
+</for>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<arg>${OUTPUTDIR}/CaptureScreens/profile2.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220704 17:03:51.369" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="CaptureScreens/profile2.png"&gt;&lt;img src="CaptureScreens/profile2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220704 17:03:51.003" endtime="20220704 17:03:51.369"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${mnu_privacy_policy}</arg>
+<arg>${list_mnu_name}[14]</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20220704 17:03:51.372" level="INFO">Verifying element 'Xpath=//android.widget.LinearLayout/android.widget.LinearLayout/android.widget.Button[1]' contains exactly text 'Privacy Policy'.</msg>
+<status status="PASS" starttime="20220704 17:03:51.369" endtime="20220704 17:03:51.458"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${mnu_terms_of_service}</arg>
+<arg>${list_mnu_name}[15]</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20220704 17:03:51.461" level="INFO">Verifying element 'Xpath=//android.widget.LinearLayout/android.widget.LinearLayout/android.widget.Button[2]' contains exactly text 'Terms of Service'.</msg>
+<status status="PASS" starttime="20220704 17:03:51.458" endtime="20220704 17:03:51.530"/>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<arg>${icn_youtube_kids}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<msg timestamp="20220704 17:03:51.587" level="INFO">Current page contains element 'Xpath=//android.widget.LinearLayout[13]/android.widget.ImageView[@resource-id="com.google.android.youtube:id/thumbnail"]'.</msg>
+<status status="PASS" starttime="20220704 17:03:51.530" endtime="20220704 17:03:51.587"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${btn_close}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220704 17:03:51.590" level="INFO">Clicking element 'Xpath=//android.view.ViewGroup/android.widget.ImageButton'.</msg>
+<status status="PASS" starttime="20220704 17:03:51.587" endtime="20220704 17:03:51.691"/>
+</kw>
+<status status="PASS" starttime="20220704 17:03:48.092" endtime="20220704 17:03:51.691"/>
 </kw>
 <kw name="Input music" library="commonKeyword">
 <kw name="Wait Until Page Contains Element" library="AppiumLibrary">
 <arg>${icn_search}</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" starttime="20220704 14:58:40.902" endtime="20220704 14:58:44.191"/>
+<status status="PASS" starttime="20220704 17:03:51.692" endtime="20220704 17:03:52.026"/>
 </kw>
 <kw name="Capture Page Screenshot" library="AppiumLibrary">
 <arg>${OUTPUTDIR}/CaptureScreens/Home.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20220704 14:58:45.159" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="CaptureScreens/Home.png"&gt;&lt;img src="CaptureScreens/Home.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220704 14:58:44.192" endtime="20220704 14:58:45.160"/>
+<msg timestamp="20220704 17:03:52.887" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="CaptureScreens/Home.png"&gt;&lt;img src="CaptureScreens/Home.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220704 17:03:52.026" endtime="20220704 17:03:52.887"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <arg>${icn_search}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220704 14:58:45.167" level="INFO">Clicking element 'Xpath=//*[@resource-id="com.google.android.youtube:id/menu_item_1"]'.</msg>
-<status status="PASS" starttime="20220704 14:58:45.160" endtime="20220704 14:58:45.778"/>
+<msg timestamp="20220704 17:03:52.890" level="INFO">Clicking element 'Xpath=//*[@resource-id="com.google.android.youtube:id/menu_item_1"]'.</msg>
+<status status="PASS" starttime="20220704 17:03:52.887" endtime="20220704 17:03:52.984"/>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <arg>${txt_search}</arg>
 <arg>${music_name}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20220704 14:58:45.787" level="INFO">Typing text 'ทักครับ - Lipta Feat. GUYGEEGEE [OFFICIAL MUSIC VIDEO]' into text field 'Xpath=//*[@resource-id="com.google.android.youtube:id/search_edit_text"]'</msg>
-<status status="PASS" starttime="20220704 14:58:45.779" endtime="20220704 14:58:49.847"/>
+<msg timestamp="20220704 17:03:52.987" level="INFO">Typing text 'ทักครับ - Lipta Feat. GUYGEEGEE [OFFICIAL MUSIC VIDEO]' into text field 'Xpath=//*[@resource-id="com.google.android.youtube:id/search_edit_text"]'</msg>
+<status status="PASS" starttime="20220704 17:03:52.984" endtime="20220704 17:03:55.467"/>
 </kw>
-<status status="PASS" starttime="20220704 14:58:40.901" endtime="20220704 14:58:49.847"/>
+<status status="PASS" starttime="20220704 17:03:51.691" endtime="20220704 17:03:55.467"/>
 </kw>
 <kw name="Search music" library="commonKeyword">
 <kw name="Capture Page Screenshot" library="AppiumLibrary">
 <arg>${OUTPUTDIR}/CaptureScreens/SearchMusic.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20220704 14:58:50.645" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="CaptureScreens/SearchMusic.png"&gt;&lt;img src="CaptureScreens/SearchMusic.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220704 14:58:49.850" endtime="20220704 14:58:50.645"/>
+<msg timestamp="20220704 17:03:55.927" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="CaptureScreens/SearchMusic.png"&gt;&lt;img src="CaptureScreens/SearchMusic.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220704 17:03:55.468" endtime="20220704 17:03:55.927"/>
 </kw>
 <kw name="Press Keycode" library="AppiumLibrary">
 <arg>66</arg>
 <doc>Sends a press of keycode to the device.</doc>
-<status status="PASS" starttime="20220704 14:58:50.645" endtime="20220704 14:58:51.426"/>
+<status status="PASS" starttime="20220704 17:03:55.927" endtime="20220704 17:03:56.497"/>
 </kw>
-<status status="PASS" starttime="20220704 14:58:49.849" endtime="20220704 14:58:51.426"/>
+<status status="PASS" starttime="20220704 17:03:55.467" endtime="20220704 17:03:56.497"/>
 </kw>
 <kw name="Click music" library="commonKeyword">
 <kw name="Wait Until Page Contains Element" library="AppiumLibrary">
 <arg>${lbl_music}</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" starttime="20220704 14:58:51.430" endtime="20220704 14:58:54.300"/>
+<status status="PASS" starttime="20220704 17:03:56.498" endtime="20220704 17:03:58.260"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <arg>${lbl_music}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220704 14:58:54.305" level="INFO">Clicking element 'android=UiSelector().descriptionContains("ทักครับ - Lipta Feat. GUYGEEGEE [OFFICIAL MUSIC VIDEO]")'.</msg>
-<status status="PASS" starttime="20220704 14:58:54.300" endtime="20220704 14:58:54.488"/>
+<msg timestamp="20220704 17:03:58.263" level="INFO">Clicking element 'android=UiSelector().descriptionContains("ทักครับ - Lipta Feat. GUYGEEGEE [OFFICIAL MUSIC VIDEO]")'.</msg>
+<status status="PASS" starttime="20220704 17:03:58.260" endtime="20220704 17:03:58.354"/>
 </kw>
-<status status="PASS" starttime="20220704 14:58:51.428" endtime="20220704 14:58:54.489"/>
+<status status="PASS" starttime="20220704 17:03:56.498" endtime="20220704 17:03:58.354"/>
 </kw>
 <kw name="Verify music name" library="commonKeyword">
 <kw name="Run Keyword And Return Status" library="BuiltIn">
@@ -89,76 +609,76 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <doc>Waits until element specified with `locator` is visible.</doc>
 <kw name="Capture Page Screenshot" library="AppiumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20220704 14:59:01.735" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220704 14:59:00.780" endtime="20220704 14:59:01.735"/>
+<msg timestamp="20220704 17:04:04.356" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220704 17:04:03.672" endtime="20220704 17:04:04.356"/>
 </kw>
-<msg timestamp="20220704 14:59:01.738" level="FAIL">Element locator 'Xpath=//android.widget.LinearLayout/android.widget.ImageView[@resource-id="com.google.android.youtube:id/content_thumbnail"]' did not match any elements after 5 seconds</msg>
-<status status="FAIL" starttime="20220704 14:58:54.495" endtime="20220704 14:59:01.739"/>
+<msg timestamp="20220704 17:04:04.356" level="FAIL">Element locator 'Xpath=//android.widget.LinearLayout/android.widget.ImageView[@resource-id="com.google.android.youtube:id/content_thumbnail"]' did not match any elements after 5 seconds</msg>
+<status status="FAIL" starttime="20220704 17:03:58.357" endtime="20220704 17:04:04.357"/>
 </kw>
-<msg timestamp="20220704 14:59:01.740" level="INFO">${status_ad} = False</msg>
-<status status="PASS" starttime="20220704 14:58:54.492" endtime="20220704 14:59:01.740"/>
+<msg timestamp="20220704 17:04:04.357" level="INFO">${status_ad} = False</msg>
+<status status="PASS" starttime="20220704 17:03:58.356" endtime="20220704 17:04:04.357"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${status_ad}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220704 14:59:01.740" endtime="20220704 14:59:01.741"/>
+<status status="PASS" starttime="20220704 17:04:04.357" endtime="20220704 17:04:04.357"/>
 </kw>
 <if>
 <branch type="IF" condition="'${status_ad}' == 'True'">
 <kw name="Log To Console" library="BuiltIn">
 <arg>Have Ad</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20220704 14:59:01.749" endtime="20220704 14:59:01.749"/>
+<status status="NOT RUN" starttime="20220704 17:04:04.358" endtime="20220704 17:04:04.358"/>
 </kw>
 <kw name="Capture Page Screenshot" library="AppiumLibrary">
 <arg>${OUTPUTDIR}/CaptureScreens/AdMusic.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<status status="NOT RUN" starttime="20220704 14:59:01.749" endtime="20220704 14:59:01.749"/>
+<status status="NOT RUN" starttime="20220704 17:04:04.358" endtime="20220704 17:04:04.358"/>
 </kw>
 <kw name="Run Keyword And Return Status" library="BuiltIn">
 <var>${status_ad}</var>
 <arg>Wait Until Element Is Visible</arg>
 <arg>${pnl_skip_ad}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="NOT RUN" starttime="20220704 14:59:01.750" endtime="20220704 14:59:01.750"/>
+<status status="NOT RUN" starttime="20220704 17:04:04.358" endtime="20220704 17:04:04.358"/>
 </kw>
 <kw name="Run Keyword And Return Status" library="BuiltIn">
 <var>${click_skip_ad}</var>
 <arg>Click Element</arg>
 <arg>${pnl_skip_ad}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="NOT RUN" starttime="20220704 14:59:01.750" endtime="20220704 14:59:01.750"/>
+<status status="NOT RUN" starttime="20220704 17:04:04.358" endtime="20220704 17:04:04.358"/>
 </kw>
 <if>
 <branch type="IF" condition="'${click_skip_ad}' == 'True' and '${click_skip_ad}' == 'True'">
 <kw name="Log To Console" library="BuiltIn">
 <arg>click skip ad</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20220704 14:59:01.750" endtime="20220704 14:59:01.753"/>
+<status status="NOT RUN" starttime="20220704 17:04:04.359" endtime="20220704 17:04:04.359"/>
 </kw>
-<status status="NOT RUN" starttime="20220704 14:59:01.750" endtime="20220704 14:59:01.753"/>
+<status status="NOT RUN" starttime="20220704 17:04:04.359" endtime="20220704 17:04:04.359"/>
 </branch>
 <branch type="ELSE IF" condition="'${click_skip_ad}' == 'False'">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>${img_ad}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="NOT RUN" starttime="20220704 14:59:01.754" endtime="20220704 14:59:01.754"/>
+<status status="NOT RUN" starttime="20220704 17:04:04.359" endtime="20220704 17:04:04.359"/>
 </kw>
 <kw name="Run Keyword And Return Status" library="BuiltIn">
 <var>${status_click_thumnail}</var>
 <arg>Click Element</arg>
 <arg>${img_ad}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="NOT RUN" starttime="20220704 14:59:01.754" endtime="20220704 14:59:01.754"/>
+<status status="NOT RUN" starttime="20220704 17:04:04.359" endtime="20220704 17:04:04.359"/>
 </kw>
 <if>
 <branch type="IF" condition="'${click_skip_ad}' == 'True'">
 <kw name="Log To Console" library="BuiltIn">
 <arg>Click thumbnail</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20220704 14:59:01.755" endtime="20220704 14:59:01.755"/>
+<status status="NOT RUN" starttime="20220704 17:04:04.359" endtime="20220704 17:04:04.359"/>
 </kw>
-<status status="NOT RUN" starttime="20220704 14:59:01.755" endtime="20220704 14:59:01.755"/>
+<status status="NOT RUN" starttime="20220704 17:04:04.359" endtime="20220704 17:04:04.360"/>
 </branch>
 <branch type="ELSE">
 <kw name="Run Keyword And Return Status" library="BuiltIn">
@@ -166,21 +686,21 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>Page Should Contain Element</arg>
 <arg>${pnl_skip_ad}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="NOT RUN" starttime="20220704 14:59:01.755" endtime="20220704 14:59:01.756"/>
+<status status="NOT RUN" starttime="20220704 17:04:04.360" endtime="20220704 17:04:04.360"/>
 </kw>
 <if>
 <branch type="IF" condition="'${click_skip_ad}' == 'True'">
 <kw name="Click Element" library="AppiumLibrary">
 <arg>${pnl_skip_ad}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="NOT RUN" starttime="20220704 14:59:01.756" endtime="20220704 14:59:01.756"/>
+<status status="NOT RUN" starttime="20220704 17:04:04.360" endtime="20220704 17:04:04.360"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>1 : VDO Playing1</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20220704 14:59:01.756" endtime="20220704 14:59:01.756"/>
+<status status="NOT RUN" starttime="20220704 17:04:04.360" endtime="20220704 17:04:04.360"/>
 </kw>
-<status status="NOT RUN" starttime="20220704 14:59:01.756" endtime="20220704 14:59:01.756"/>
+<status status="NOT RUN" starttime="20220704 17:04:04.360" endtime="20220704 17:04:04.360"/>
 </branch>
 <branch type="ELSE">
 <kw name="Run Keyword And Return Status" library="BuiltIn">
@@ -188,81 +708,87 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>Page Should Not Contain Element</arg>
 <arg>${img_ad}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="NOT RUN" starttime="20220704 14:59:01.756" endtime="20220704 14:59:01.756"/>
+<status status="NOT RUN" starttime="20220704 17:04:04.360" endtime="20220704 17:04:04.360"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>2 : VDO Playing1</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20220704 14:59:01.756" endtime="20220704 14:59:01.757"/>
+<status status="NOT RUN" starttime="20220704 17:04:04.360" endtime="20220704 17:04:04.360"/>
 </kw>
-<status status="NOT RUN" starttime="20220704 14:59:01.756" endtime="20220704 14:59:01.757"/>
+<status status="NOT RUN" starttime="20220704 17:04:04.360" endtime="20220704 17:04:04.360"/>
 </branch>
-<status status="NOT RUN" starttime="20220704 14:59:01.756" endtime="20220704 14:59:01.757"/>
+<status status="NOT RUN" starttime="20220704 17:04:04.360" endtime="20220704 17:04:04.360"/>
 </if>
-<status status="NOT RUN" starttime="20220704 14:59:01.755" endtime="20220704 14:59:01.757"/>
+<status status="NOT RUN" starttime="20220704 17:04:04.360" endtime="20220704 17:04:04.360"/>
 </branch>
-<status status="NOT RUN" starttime="20220704 14:59:01.755" endtime="20220704 14:59:01.757"/>
+<status status="NOT RUN" starttime="20220704 17:04:04.359" endtime="20220704 17:04:04.361"/>
 </if>
-<status status="NOT RUN" starttime="20220704 14:59:01.754" endtime="20220704 14:59:01.757"/>
+<status status="NOT RUN" starttime="20220704 17:04:04.359" endtime="20220704 17:04:04.361"/>
 </branch>
 <branch type="ELSE">
-<kw name="Run Keyword And Return Status" library="BuiltIn">
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
 <var>${status_click_thumnail}</var>
 <arg>Click Element</arg>
 <arg>${pnl_skip_ad}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="NOT RUN" starttime="20220704 14:59:01.757" endtime="20220704 14:59:01.757"/>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="NOT RUN" starttime="20220704 17:04:04.361" endtime="20220704 17:04:04.361"/>
 </kw>
 <if>
 <branch type="IF" condition="'${click_skip_ad}' == 'True'">
 <kw name="Log To Console" library="BuiltIn">
 <arg>Click skip ad2</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20220704 14:59:01.757" endtime="20220704 14:59:01.757"/>
+<status status="NOT RUN" starttime="20220704 17:04:04.361" endtime="20220704 17:04:04.361"/>
 </kw>
-<status status="NOT RUN" starttime="20220704 14:59:01.757" endtime="20220704 14:59:01.757"/>
+<status status="NOT RUN" starttime="20220704 17:04:04.361" endtime="20220704 17:04:04.361"/>
 </branch>
 <branch type="ELSE">
-<kw name="Run Keyword And Return Status" library="BuiltIn">
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
 <var>${status}</var>
 <arg>Page Should Not Contain Element</arg>
 <arg>${img_ad}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="NOT RUN" starttime="20220704 14:59:01.758" endtime="20220704 14:59:01.758"/>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="NOT RUN" starttime="20220704 17:04:04.361" endtime="20220704 17:04:04.361"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${status} : VDO Playing2</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20220704 14:59:01.758" endtime="20220704 14:59:01.758"/>
+<status status="NOT RUN" starttime="20220704 17:04:04.361" endtime="20220704 17:04:04.361"/>
 </kw>
-<status status="NOT RUN" starttime="20220704 14:59:01.757" endtime="20220704 14:59:01.758"/>
+<status status="NOT RUN" starttime="20220704 17:04:04.361" endtime="20220704 17:04:04.361"/>
 </branch>
-<status status="NOT RUN" starttime="20220704 14:59:01.757" endtime="20220704 14:59:01.758"/>
+<status status="NOT RUN" starttime="20220704 17:04:04.361" endtime="20220704 17:04:04.361"/>
 </if>
-<status status="NOT RUN" starttime="20220704 14:59:01.757" endtime="20220704 14:59:01.758"/>
+<status status="NOT RUN" starttime="20220704 17:04:04.361" endtime="20220704 17:04:04.361"/>
 </branch>
-<status status="NOT RUN" starttime="20220704 14:59:01.750" endtime="20220704 14:59:01.758"/>
+<status status="NOT RUN" starttime="20220704 17:04:04.359" endtime="20220704 17:04:04.361"/>
 </if>
-<status status="NOT RUN" starttime="20220704 14:59:01.748" endtime="20220704 14:59:01.758"/>
+<status status="NOT RUN" starttime="20220704 17:04:04.358" endtime="20220704 17:04:04.361"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log To Console" library="BuiltIn">
 <arg>Not Ad</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220704 14:59:01.758" endtime="20220704 14:59:01.760"/>
+<status status="PASS" starttime="20220704 17:04:04.362" endtime="20220704 17:04:04.363"/>
 </kw>
-<status status="PASS" starttime="20220704 14:59:01.758" endtime="20220704 14:59:01.760"/>
+<status status="PASS" starttime="20220704 17:04:04.361" endtime="20220704 17:04:04.363"/>
 </branch>
-<status status="PASS" starttime="20220704 14:59:01.744" endtime="20220704 14:59:01.760"/>
+<status status="PASS" starttime="20220704 17:04:04.357" endtime="20220704 17:04:04.363"/>
 </if>
-<status status="PASS" starttime="20220704 14:58:54.490" endtime="20220704 14:59:01.760"/>
+<status status="PASS" starttime="20220704 17:03:58.355" endtime="20220704 17:04:04.363"/>
 </kw>
 <kw name="Verify icon on page play music" library="commonKeyword">
 <arg>${list_content_desc_en}</arg>
+<kw name="Page Should Not Contain Element" library="AppiumLibrary">
+<arg>${icn_pause_music}</arg>
+<doc>Verifies that current page not contains `locator` element.</doc>
+<msg timestamp="20220704 17:04:04.485" level="INFO">Current page not contains element 'Xpath=//android.widget.ImageView[@resource-id="com.google.android.youtube:id/player_control_play_pause_replay_button"]'.</msg>
+<status status="PASS" starttime="20220704 17:04:04.364" endtime="20220704 17:04:04.485"/>
+</kw>
 <kw name="Wait Until Page Contains Element" library="AppiumLibrary">
 <arg>${pnl_onload}</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" starttime="20220704 14:59:01.765" endtime="20220704 14:59:03.211"/>
+<status status="PASS" starttime="20220704 17:04:04.485" endtime="20220704 17:04:04.642"/>
 </kw>
 <for flavor="IN ENUMERATE">
 <var>${i}</var>
@@ -274,22 +800,22 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <kw name="Page Should Contain Element" library="AppiumLibrary">
 <arg>Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${i+1}]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "${value}")]/android.widget.ImageView</arg>
 <doc>Verifies that current page contains `locator` element.</doc>
-<msg timestamp="20220704 14:59:04.477" level="INFO">Current page contains element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "like this video along")]/android.widget.ImageView'.</msg>
-<status status="PASS" starttime="20220704 14:59:03.214" endtime="20220704 14:59:04.477"/>
+<msg timestamp="20220704 17:04:04.767" level="INFO">Current page contains element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "like this video along")]/android.widget.ImageView'.</msg>
+<status status="PASS" starttime="20220704 17:04:04.643" endtime="20220704 17:04:04.767"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${i}</var>
 <arg>${i+1}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220704 14:59:04.486" level="INFO">${i} = 1</msg>
-<status status="PASS" starttime="20220704 14:59:04.484" endtime="20220704 14:59:04.486"/>
+<msg timestamp="20220704 17:04:04.769" level="INFO">${i} = 1</msg>
+<status status="PASS" starttime="20220704 17:04:04.767" endtime="20220704 17:04:04.769"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>${i} == ${6}</arg>
 <doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220704 14:59:04.487" endtime="20220704 14:59:04.488"/>
+<status status="PASS" starttime="20220704 17:04:04.769" endtime="20220704 17:04:04.771"/>
 </kw>
-<status status="PASS" starttime="20220704 14:59:03.213" endtime="20220704 14:59:04.489"/>
+<status status="PASS" starttime="20220704 17:04:04.642" endtime="20220704 17:04:04.771"/>
 </iter>
 <iter>
 <var name="${i}">1</var>
@@ -297,22 +823,22 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <kw name="Page Should Contain Element" library="AppiumLibrary">
 <arg>Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${i+1}]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "${value}")]/android.widget.ImageView</arg>
 <doc>Verifies that current page contains `locator` element.</doc>
-<msg timestamp="20220704 14:59:04.928" level="INFO">Current page contains element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "Dislike this video")]/android.widget.ImageView'.</msg>
-<status status="PASS" starttime="20220704 14:59:04.489" endtime="20220704 14:59:04.929"/>
+<msg timestamp="20220704 17:04:04.863" level="INFO">Current page contains element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "Dislike this video")]/android.widget.ImageView'.</msg>
+<status status="PASS" starttime="20220704 17:04:04.771" endtime="20220704 17:04:04.863"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${i}</var>
 <arg>${i+1}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220704 14:59:04.931" level="INFO">${i} = 2</msg>
-<status status="PASS" starttime="20220704 14:59:04.929" endtime="20220704 14:59:04.931"/>
+<msg timestamp="20220704 17:04:04.865" level="INFO">${i} = 2</msg>
+<status status="PASS" starttime="20220704 17:04:04.864" endtime="20220704 17:04:04.865"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>${i} == ${6}</arg>
 <doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220704 14:59:04.931" endtime="20220704 14:59:04.932"/>
+<status status="PASS" starttime="20220704 17:04:04.865" endtime="20220704 17:04:04.867"/>
 </kw>
-<status status="PASS" starttime="20220704 14:59:04.489" endtime="20220704 14:59:04.933"/>
+<status status="PASS" starttime="20220704 17:04:04.771" endtime="20220704 17:04:04.867"/>
 </iter>
 <iter>
 <var name="${i}">2</var>
@@ -320,22 +846,22 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <kw name="Page Should Contain Element" library="AppiumLibrary">
 <arg>Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${i+1}]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "${value}")]/android.widget.ImageView</arg>
 <doc>Verifies that current page contains `locator` element.</doc>
-<msg timestamp="20220704 14:59:05.392" level="INFO">Current page contains element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[3]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "Live chat")]/android.widget.ImageView'.</msg>
-<status status="PASS" starttime="20220704 14:59:04.933" endtime="20220704 14:59:05.392"/>
+<msg timestamp="20220704 17:04:04.961" level="INFO">Current page contains element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[3]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "Live chat")]/android.widget.ImageView'.</msg>
+<status status="PASS" starttime="20220704 17:04:04.868" endtime="20220704 17:04:04.962"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${i}</var>
 <arg>${i+1}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220704 14:59:05.395" level="INFO">${i} = 3</msg>
-<status status="PASS" starttime="20220704 14:59:05.393" endtime="20220704 14:59:05.395"/>
+<msg timestamp="20220704 17:04:04.963" level="INFO">${i} = 3</msg>
+<status status="PASS" starttime="20220704 17:04:04.962" endtime="20220704 17:04:04.963"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>${i} == ${6}</arg>
 <doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220704 14:59:05.395" endtime="20220704 14:59:05.397"/>
+<status status="PASS" starttime="20220704 17:04:04.963" endtime="20220704 17:04:04.964"/>
 </kw>
-<status status="PASS" starttime="20220704 14:59:04.933" endtime="20220704 14:59:05.397"/>
+<status status="PASS" starttime="20220704 17:04:04.867" endtime="20220704 17:04:04.964"/>
 </iter>
 <iter>
 <var name="${i}">3</var>
@@ -343,22 +869,22 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <kw name="Page Should Contain Element" library="AppiumLibrary">
 <arg>Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${i+1}]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "${value}")]/android.widget.ImageView</arg>
 <doc>Verifies that current page contains `locator` element.</doc>
-<msg timestamp="20220704 14:59:06.118" level="INFO">Current page contains element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "Share")]/android.widget.ImageView'.</msg>
-<status status="PASS" starttime="20220704 14:59:05.397" endtime="20220704 14:59:06.118"/>
+<msg timestamp="20220704 17:04:05.073" level="INFO">Current page contains element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "Share")]/android.widget.ImageView'.</msg>
+<status status="PASS" starttime="20220704 17:04:04.964" endtime="20220704 17:04:05.073"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${i}</var>
 <arg>${i+1}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220704 14:59:06.121" level="INFO">${i} = 4</msg>
-<status status="PASS" starttime="20220704 14:59:06.119" endtime="20220704 14:59:06.121"/>
+<msg timestamp="20220704 17:04:05.074" level="INFO">${i} = 4</msg>
+<status status="PASS" starttime="20220704 17:04:05.073" endtime="20220704 17:04:05.074"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>${i} == ${6}</arg>
 <doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220704 14:59:06.121" endtime="20220704 14:59:06.123"/>
+<status status="PASS" starttime="20220704 17:04:05.074" endtime="20220704 17:04:05.075"/>
 </kw>
-<status status="PASS" starttime="20220704 14:59:05.397" endtime="20220704 14:59:06.123"/>
+<status status="PASS" starttime="20220704 17:04:04.964" endtime="20220704 17:04:05.075"/>
 </iter>
 <iter>
 <var name="${i}">4</var>
@@ -366,22 +892,22 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <kw name="Page Should Contain Element" library="AppiumLibrary">
 <arg>Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${i+1}]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "${value}")]/android.widget.ImageView</arg>
 <doc>Verifies that current page contains `locator` element.</doc>
-<msg timestamp="20220704 14:59:06.814" level="INFO">Current page contains element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[5]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "Open camera to create a Short with this sound")]/android.widget.ImageView'.</msg>
-<status status="PASS" starttime="20220704 14:59:06.124" endtime="20220704 14:59:06.814"/>
+<msg timestamp="20220704 17:04:05.217" level="INFO">Current page contains element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[5]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "Open camera to create a Short with this sound")]/android.widget.ImageView'.</msg>
+<status status="PASS" starttime="20220704 17:04:05.075" endtime="20220704 17:04:05.217"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${i}</var>
 <arg>${i+1}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220704 14:59:06.816" level="INFO">${i} = 5</msg>
-<status status="PASS" starttime="20220704 14:59:06.814" endtime="20220704 14:59:06.816"/>
+<msg timestamp="20220704 17:04:05.218" level="INFO">${i} = 5</msg>
+<status status="PASS" starttime="20220704 17:04:05.217" endtime="20220704 17:04:05.218"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>${i} == ${6}</arg>
 <doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220704 14:59:06.816" endtime="20220704 14:59:06.818"/>
+<status status="PASS" starttime="20220704 17:04:05.218" endtime="20220704 17:04:05.219"/>
 </kw>
-<status status="PASS" starttime="20220704 14:59:06.124" endtime="20220704 14:59:06.818"/>
+<status status="PASS" starttime="20220704 17:04:05.075" endtime="20220704 17:04:05.219"/>
 </iter>
 <iter>
 <var name="${i}">5</var>
@@ -389,25 +915,25 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <kw name="Page Should Contain Element" library="AppiumLibrary">
 <arg>Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${i+1}]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "${value}")]/android.widget.ImageView</arg>
 <doc>Verifies that current page contains `locator` element.</doc>
-<msg timestamp="20220704 14:59:07.608" level="INFO">Current page contains element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[6]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "Download")]/android.widget.ImageView'.</msg>
-<status status="PASS" starttime="20220704 14:59:06.818" endtime="20220704 14:59:07.608"/>
+<msg timestamp="20220704 17:04:05.323" level="INFO">Current page contains element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[6]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "Download")]/android.widget.ImageView'.</msg>
+<status status="PASS" starttime="20220704 17:04:05.219" endtime="20220704 17:04:05.323"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${i}</var>
 <arg>${i+1}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220704 14:59:07.610" level="INFO">${i} = 6</msg>
-<status status="PASS" starttime="20220704 14:59:07.609" endtime="20220704 14:59:07.610"/>
+<msg timestamp="20220704 17:04:05.324" level="INFO">${i} = 6</msg>
+<status status="PASS" starttime="20220704 17:04:05.323" endtime="20220704 17:04:05.324"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>${i} == ${6}</arg>
 <doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<msg timestamp="20220704 14:59:07.612" level="INFO">Exiting for loop altogether.</msg>
-<status status="PASS" starttime="20220704 14:59:07.610" endtime="20220704 14:59:07.612"/>
+<msg timestamp="20220704 17:04:05.325" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20220704 17:04:05.324" endtime="20220704 17:04:05.326"/>
 </kw>
-<status status="PASS" starttime="20220704 14:59:06.818" endtime="20220704 14:59:07.612"/>
+<status status="PASS" starttime="20220704 17:04:05.219" endtime="20220704 17:04:05.326"/>
 </iter>
-<status status="PASS" starttime="20220704 14:59:03.212" endtime="20220704 14:59:07.612"/>
+<status status="PASS" starttime="20220704 17:04:04.642" endtime="20220704 17:04:05.326"/>
 </for>
 <kw name="Swipe By Percent" library="AppiumLibrary">
 <arg>90</arg>
@@ -416,20 +942,20 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>50</arg>
 <doc>Swipe from one percent of the screen to another percent, for an optional duration.
 Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
-<status status="PASS" starttime="20220704 14:59:07.613" endtime="20220704 14:59:11.092"/>
+<status status="PASS" starttime="20220704 17:04:05.326" endtime="20220704 17:04:07.185"/>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <var>${len}</var>
 <arg>${list_content_desc}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20220704 14:59:11.092" level="INFO">Length is 8</msg>
-<msg timestamp="20220704 14:59:11.093" level="INFO">${len} = 8</msg>
-<status status="PASS" starttime="20220704 14:59:11.092" endtime="20220704 14:59:11.093"/>
+<msg timestamp="20220704 17:04:07.185" level="INFO">Length is 8</msg>
+<msg timestamp="20220704 17:04:07.185" level="INFO">${len} = 8</msg>
+<status status="PASS" starttime="20220704 17:04:07.185" endtime="20220704 17:04:07.185"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${len}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220704 14:59:11.093" endtime="20220704 14:59:11.095"/>
+<status status="PASS" starttime="20220704 17:04:07.185" endtime="20220704 17:04:07.186"/>
 </kw>
 <for flavor="IN ENUMERATE">
 <var>${i}</var>
@@ -441,22 +967,22 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <kw name="Page Should Contain Element" library="AppiumLibrary">
 <arg>Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${len-2}]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "${list_content_desc}[${len-1}]")]/android.widget.ImageView</arg>
 <doc>Verifies that current page contains `locator` element.</doc>
-<msg timestamp="20220704 14:59:11.444" level="INFO">Current page contains element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[6]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "Save to playlist")]/android.widget.ImageView'.</msg>
-<status status="PASS" starttime="20220704 14:59:11.097" endtime="20220704 14:59:11.444"/>
+<msg timestamp="20220704 17:04:07.821" level="INFO">Current page contains element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[6]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "Save to playlist")]/android.widget.ImageView'.</msg>
+<status status="PASS" starttime="20220704 17:04:07.186" endtime="20220704 17:04:07.821"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${len}</var>
 <arg>${len-1}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220704 14:59:11.447" level="INFO">${len} = 7</msg>
-<status status="PASS" starttime="20220704 14:59:11.445" endtime="20220704 14:59:11.447"/>
+<msg timestamp="20220704 17:04:07.822" level="INFO">${len} = 7</msg>
+<status status="PASS" starttime="20220704 17:04:07.821" endtime="20220704 17:04:07.822"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>${len} == ${2}</arg>
 <doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220704 14:59:11.448" endtime="20220704 14:59:11.451"/>
+<status status="PASS" starttime="20220704 17:04:07.823" endtime="20220704 17:04:07.824"/>
 </kw>
-<status status="PASS" starttime="20220704 14:59:11.097" endtime="20220704 14:59:11.451"/>
+<status status="PASS" starttime="20220704 17:04:07.186" endtime="20220704 17:04:07.824"/>
 </iter>
 <iter>
 <var name="${i}">1</var>
@@ -464,22 +990,22 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <kw name="Page Should Contain Element" library="AppiumLibrary">
 <arg>Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${len-2}]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "${list_content_desc}[${len-1}]")]/android.widget.ImageView</arg>
 <doc>Verifies that current page contains `locator` element.</doc>
-<msg timestamp="20220704 14:59:12.469" level="INFO">Current page contains element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[5]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "Clip")]/android.widget.ImageView'.</msg>
-<status status="PASS" starttime="20220704 14:59:11.452" endtime="20220704 14:59:12.470"/>
+<msg timestamp="20220704 17:04:07.931" level="INFO">Current page contains element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[5]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "Clip")]/android.widget.ImageView'.</msg>
+<status status="PASS" starttime="20220704 17:04:07.825" endtime="20220704 17:04:07.931"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${len}</var>
 <arg>${len-1}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220704 14:59:12.473" level="INFO">${len} = 6</msg>
-<status status="PASS" starttime="20220704 14:59:12.470" endtime="20220704 14:59:12.473"/>
+<msg timestamp="20220704 17:04:07.932" level="INFO">${len} = 6</msg>
+<status status="PASS" starttime="20220704 17:04:07.931" endtime="20220704 17:04:07.932"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>${len} == ${2}</arg>
 <doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220704 14:59:12.473" endtime="20220704 14:59:12.475"/>
+<status status="PASS" starttime="20220704 17:04:07.933" endtime="20220704 17:04:07.933"/>
 </kw>
-<status status="PASS" starttime="20220704 14:59:11.451" endtime="20220704 14:59:12.475"/>
+<status status="PASS" starttime="20220704 17:04:07.824" endtime="20220704 17:04:07.933"/>
 </iter>
 <iter>
 <var name="${i}">2</var>
@@ -487,22 +1013,22 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <kw name="Page Should Contain Element" library="AppiumLibrary">
 <arg>Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${len-2}]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "${list_content_desc}[${len-1}]")]/android.widget.ImageView</arg>
 <doc>Verifies that current page contains `locator` element.</doc>
-<msg timestamp="20220704 14:59:12.924" level="INFO">Current page contains element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "Download")]/android.widget.ImageView'.</msg>
-<status status="PASS" starttime="20220704 14:59:12.476" endtime="20220704 14:59:12.924"/>
+<msg timestamp="20220704 17:04:08.021" level="INFO">Current page contains element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "Download")]/android.widget.ImageView'.</msg>
+<status status="PASS" starttime="20220704 17:04:07.934" endtime="20220704 17:04:08.021"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${len}</var>
 <arg>${len-1}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220704 14:59:12.927" level="INFO">${len} = 5</msg>
-<status status="PASS" starttime="20220704 14:59:12.924" endtime="20220704 14:59:12.927"/>
+<msg timestamp="20220704 17:04:08.023" level="INFO">${len} = 5</msg>
+<status status="PASS" starttime="20220704 17:04:08.022" endtime="20220704 17:04:08.023"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>${len} == ${2}</arg>
 <doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220704 14:59:12.927" endtime="20220704 14:59:12.929"/>
+<status status="PASS" starttime="20220704 17:04:08.023" endtime="20220704 17:04:08.024"/>
 </kw>
-<status status="PASS" starttime="20220704 14:59:12.475" endtime="20220704 14:59:12.929"/>
+<status status="PASS" starttime="20220704 17:04:07.933" endtime="20220704 17:04:08.024"/>
 </iter>
 <iter>
 <var name="${i}">3</var>
@@ -510,22 +1036,22 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <kw name="Page Should Contain Element" library="AppiumLibrary">
 <arg>Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${len-2}]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "${list_content_desc}[${len-1}]")]/android.widget.ImageView</arg>
 <doc>Verifies that current page contains `locator` element.</doc>
-<msg timestamp="20220704 14:59:13.252" level="INFO">Current page contains element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[3]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "Open camera to create a Short with this sound")]/android.widget.ImageView'.</msg>
-<status status="PASS" starttime="20220704 14:59:12.929" endtime="20220704 14:59:13.252"/>
+<msg timestamp="20220704 17:04:08.156" level="INFO">Current page contains element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[3]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "Open camera to create a Short with this sound")]/android.widget.ImageView'.</msg>
+<status status="PASS" starttime="20220704 17:04:08.024" endtime="20220704 17:04:08.156"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${len}</var>
 <arg>${len-1}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220704 14:59:13.255" level="INFO">${len} = 4</msg>
-<status status="PASS" starttime="20220704 14:59:13.253" endtime="20220704 14:59:13.255"/>
+<msg timestamp="20220704 17:04:08.157" level="INFO">${len} = 4</msg>
+<status status="PASS" starttime="20220704 17:04:08.156" endtime="20220704 17:04:08.157"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>${len} == ${2}</arg>
 <doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220704 14:59:13.255" endtime="20220704 14:59:13.257"/>
+<status status="PASS" starttime="20220704 17:04:08.157" endtime="20220704 17:04:08.158"/>
 </kw>
-<status status="PASS" starttime="20220704 14:59:12.929" endtime="20220704 14:59:13.257"/>
+<status status="PASS" starttime="20220704 17:04:08.024" endtime="20220704 17:04:08.158"/>
 </iter>
 <iter>
 <var name="${i}">4</var>
@@ -533,22 +1059,22 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <kw name="Page Should Contain Element" library="AppiumLibrary">
 <arg>Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${len-2}]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "${list_content_desc}[${len-1}]")]/android.widget.ImageView</arg>
 <doc>Verifies that current page contains `locator` element.</doc>
-<msg timestamp="20220704 14:59:13.568" level="INFO">Current page contains element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "Share")]/android.widget.ImageView'.</msg>
-<status status="PASS" starttime="20220704 14:59:13.257" endtime="20220704 14:59:13.568"/>
+<msg timestamp="20220704 17:04:08.264" level="INFO">Current page contains element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "Share")]/android.widget.ImageView'.</msg>
+<status status="PASS" starttime="20220704 17:04:08.158" endtime="20220704 17:04:08.265"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${len}</var>
 <arg>${len-1}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220704 14:59:13.571" level="INFO">${len} = 3</msg>
-<status status="PASS" starttime="20220704 14:59:13.569" endtime="20220704 14:59:13.571"/>
+<msg timestamp="20220704 17:04:08.266" level="INFO">${len} = 3</msg>
+<status status="PASS" starttime="20220704 17:04:08.265" endtime="20220704 17:04:08.266"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>${len} == ${2}</arg>
 <doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220704 14:59:13.571" endtime="20220704 14:59:13.573"/>
+<status status="PASS" starttime="20220704 17:04:08.266" endtime="20220704 17:04:08.267"/>
 </kw>
-<status status="PASS" starttime="20220704 14:59:13.257" endtime="20220704 14:59:13.573"/>
+<status status="PASS" starttime="20220704 17:04:08.158" endtime="20220704 17:04:08.267"/>
 </iter>
 <iter>
 <var name="${i}">5</var>
@@ -556,27 +1082,27 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <kw name="Page Should Contain Element" library="AppiumLibrary">
 <arg>Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${len-2}]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "${list_content_desc}[${len-1}]")]/android.widget.ImageView</arg>
 <doc>Verifies that current page contains `locator` element.</doc>
-<msg timestamp="20220704 14:59:13.927" level="INFO">Current page contains element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "Live chat")]/android.widget.ImageView'.</msg>
-<status status="PASS" starttime="20220704 14:59:13.574" endtime="20220704 14:59:13.927"/>
+<msg timestamp="20220704 17:04:08.956" level="INFO">Current page contains element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "Live chat")]/android.widget.ImageView'.</msg>
+<status status="PASS" starttime="20220704 17:04:08.268" endtime="20220704 17:04:08.956"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${len}</var>
 <arg>${len-1}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220704 14:59:13.929" level="INFO">${len} = 2</msg>
-<status status="PASS" starttime="20220704 14:59:13.927" endtime="20220704 14:59:13.929"/>
+<msg timestamp="20220704 17:04:08.957" level="INFO">${len} = 2</msg>
+<status status="PASS" starttime="20220704 17:04:08.956" endtime="20220704 17:04:08.957"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>${len} == ${2}</arg>
 <doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<msg timestamp="20220704 14:59:13.931" level="INFO">Exiting for loop altogether.</msg>
-<status status="PASS" starttime="20220704 14:59:13.930" endtime="20220704 14:59:13.931"/>
+<msg timestamp="20220704 17:04:08.958" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20220704 17:04:08.957" endtime="20220704 17:04:08.958"/>
 </kw>
-<status status="PASS" starttime="20220704 14:59:13.573" endtime="20220704 14:59:13.932"/>
+<status status="PASS" starttime="20220704 17:04:08.267" endtime="20220704 17:04:08.958"/>
 </iter>
-<status status="PASS" starttime="20220704 14:59:11.095" endtime="20220704 14:59:13.932"/>
+<status status="PASS" starttime="20220704 17:04:07.186" endtime="20220704 17:04:08.958"/>
 </for>
-<status status="PASS" starttime="20220704 14:59:01.763" endtime="20220704 14:59:13.932"/>
+<status status="PASS" starttime="20220704 17:04:04.363" endtime="20220704 17:04:08.958"/>
 </kw>
 <kw name="Verify name on page play music" library="commonKeyword">
 <arg>${list_content_desc_en}</arg>
@@ -587,7 +1113,7 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <arg>50</arg>
 <doc>Swipe from one percent of the screen to another percent, for an optional duration.
 Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
-<status status="PASS" starttime="20220704 14:59:13.934" endtime="20220704 14:59:16.294"/>
+<status status="PASS" starttime="20220704 17:04:08.960" endtime="20220704 17:04:10.411"/>
 </kw>
 <for flavor="IN ENUMERATE">
 <var>${i}</var>
@@ -601,34 +1127,34 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <arg>Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${i+1}]/android.view.ViewGroup/android.view.ViewGroup</arg>
 <arg>content-desc</arg>
 <doc>Get element attribute using given attribute: name, value,...</doc>
-<msg timestamp="20220704 14:59:16.610" level="INFO">Element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup' attribute 'content-desc' value 'like this video along with 482,052 other people' </msg>
-<msg timestamp="20220704 14:59:16.611" level="INFO">${data} = like this video along with 482,052 other people</msg>
-<status status="PASS" starttime="20220704 14:59:16.294" endtime="20220704 14:59:16.611"/>
+<msg timestamp="20220704 17:04:10.522" level="INFO">Element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup' attribute 'content-desc' value 'like this video along with 482,196 other people' </msg>
+<msg timestamp="20220704 17:04:10.522" level="INFO">${data} = like this video along with 482,196 other people</msg>
+<status status="PASS" starttime="20220704 17:04:10.412" endtime="20220704 17:04:10.522"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${data} == ${value}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220704 14:59:16.611" endtime="20220704 14:59:16.613"/>
+<status status="PASS" starttime="20220704 17:04:10.522" endtime="20220704 17:04:10.524"/>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <arg>${data}</arg>
 <arg>${value}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20220704 14:59:16.613" endtime="20220704 14:59:16.614"/>
+<status status="PASS" starttime="20220704 17:04:10.524" endtime="20220704 17:04:10.524"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${i}</var>
 <arg>${i+1}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220704 14:59:16.616" level="INFO">${i} = 1</msg>
-<status status="PASS" starttime="20220704 14:59:16.614" endtime="20220704 14:59:16.616"/>
+<msg timestamp="20220704 17:04:10.525" level="INFO">${i} = 1</msg>
+<status status="PASS" starttime="20220704 17:04:10.524" endtime="20220704 17:04:10.525"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>${i} == ${6}</arg>
 <doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220704 14:59:16.616" endtime="20220704 14:59:16.618"/>
+<status status="PASS" starttime="20220704 17:04:10.526" endtime="20220704 17:04:10.526"/>
 </kw>
-<status status="PASS" starttime="20220704 14:59:16.294" endtime="20220704 14:59:16.618"/>
+<status status="PASS" starttime="20220704 17:04:10.411" endtime="20220704 17:04:10.526"/>
 </iter>
 <iter>
 <var name="${i}">1</var>
@@ -638,34 +1164,34 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <arg>Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${i+1}]/android.view.ViewGroup/android.view.ViewGroup</arg>
 <arg>content-desc</arg>
 <doc>Get element attribute using given attribute: name, value,...</doc>
-<msg timestamp="20220704 14:59:17.714" level="INFO">Element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup' attribute 'content-desc' value 'Dislike this video' </msg>
-<msg timestamp="20220704 14:59:17.714" level="INFO">${data} = Dislike this video</msg>
-<status status="PASS" starttime="20220704 14:59:16.618" endtime="20220704 14:59:17.715"/>
+<msg timestamp="20220704 17:04:10.648" level="INFO">Element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup' attribute 'content-desc' value 'Dislike this video' </msg>
+<msg timestamp="20220704 17:04:10.648" level="INFO">${data} = Dislike this video</msg>
+<status status="PASS" starttime="20220704 17:04:10.527" endtime="20220704 17:04:10.648"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${data} == ${value}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220704 14:59:17.715" endtime="20220704 14:59:17.719"/>
+<status status="PASS" starttime="20220704 17:04:10.648" endtime="20220704 17:04:10.649"/>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <arg>${data}</arg>
 <arg>${value}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20220704 14:59:17.720" endtime="20220704 14:59:17.720"/>
+<status status="PASS" starttime="20220704 17:04:10.649" endtime="20220704 17:04:10.649"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${i}</var>
 <arg>${i+1}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220704 14:59:17.723" level="INFO">${i} = 2</msg>
-<status status="PASS" starttime="20220704 14:59:17.721" endtime="20220704 14:59:17.723"/>
+<msg timestamp="20220704 17:04:10.651" level="INFO">${i} = 2</msg>
+<status status="PASS" starttime="20220704 17:04:10.650" endtime="20220704 17:04:10.651"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>${i} == ${6}</arg>
 <doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220704 14:59:17.724" endtime="20220704 14:59:17.726"/>
+<status status="PASS" starttime="20220704 17:04:10.651" endtime="20220704 17:04:10.652"/>
 </kw>
-<status status="PASS" starttime="20220704 14:59:16.618" endtime="20220704 14:59:17.727"/>
+<status status="PASS" starttime="20220704 17:04:10.527" endtime="20220704 17:04:10.652"/>
 </iter>
 <iter>
 <var name="${i}">2</var>
@@ -675,34 +1201,34 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <arg>Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${i+1}]/android.view.ViewGroup/android.view.ViewGroup</arg>
 <arg>content-desc</arg>
 <doc>Get element attribute using given attribute: name, value,...</doc>
-<msg timestamp="20220704 14:59:18.105" level="INFO">Element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[3]/android.view.ViewGroup/android.view.ViewGroup' attribute 'content-desc' value 'Live chat' </msg>
-<msg timestamp="20220704 14:59:18.105" level="INFO">${data} = Live chat</msg>
-<status status="PASS" starttime="20220704 14:59:17.728" endtime="20220704 14:59:18.106"/>
+<msg timestamp="20220704 17:04:10.790" level="INFO">Element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[3]/android.view.ViewGroup/android.view.ViewGroup' attribute 'content-desc' value 'Live chat' </msg>
+<msg timestamp="20220704 17:04:10.790" level="INFO">${data} = Live chat</msg>
+<status status="PASS" starttime="20220704 17:04:10.652" endtime="20220704 17:04:10.790"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${data} == ${value}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220704 14:59:18.106" endtime="20220704 14:59:18.107"/>
+<status status="PASS" starttime="20220704 17:04:10.790" endtime="20220704 17:04:10.790"/>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <arg>${data}</arg>
 <arg>${value}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20220704 14:59:18.107" endtime="20220704 14:59:18.108"/>
+<status status="PASS" starttime="20220704 17:04:10.791" endtime="20220704 17:04:10.791"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${i}</var>
 <arg>${i+1}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220704 14:59:18.111" level="INFO">${i} = 3</msg>
-<status status="PASS" starttime="20220704 14:59:18.109" endtime="20220704 14:59:18.111"/>
+<msg timestamp="20220704 17:04:10.793" level="INFO">${i} = 3</msg>
+<status status="PASS" starttime="20220704 17:04:10.791" endtime="20220704 17:04:10.793"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>${i} == ${6}</arg>
 <doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220704 14:59:18.112" endtime="20220704 14:59:18.116"/>
+<status status="PASS" starttime="20220704 17:04:10.793" endtime="20220704 17:04:10.793"/>
 </kw>
-<status status="PASS" starttime="20220704 14:59:17.727" endtime="20220704 14:59:18.116"/>
+<status status="PASS" starttime="20220704 17:04:10.652" endtime="20220704 17:04:10.793"/>
 </iter>
 <iter>
 <var name="${i}">3</var>
@@ -712,34 +1238,34 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <arg>Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${i+1}]/android.view.ViewGroup/android.view.ViewGroup</arg>
 <arg>content-desc</arg>
 <doc>Get element attribute using given attribute: name, value,...</doc>
-<msg timestamp="20220704 14:59:18.453" level="INFO">Element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup' attribute 'content-desc' value 'Share' </msg>
-<msg timestamp="20220704 14:59:18.454" level="INFO">${data} = Share</msg>
-<status status="PASS" starttime="20220704 14:59:18.117" endtime="20220704 14:59:18.454"/>
+<msg timestamp="20220704 17:04:10.899" level="INFO">Element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup' attribute 'content-desc' value 'Share' </msg>
+<msg timestamp="20220704 17:04:10.899" level="INFO">${data} = Share</msg>
+<status status="PASS" starttime="20220704 17:04:10.794" endtime="20220704 17:04:10.899"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${data} == ${value}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220704 14:59:18.454" endtime="20220704 14:59:18.456"/>
+<status status="PASS" starttime="20220704 17:04:10.899" endtime="20220704 17:04:10.900"/>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <arg>${data}</arg>
 <arg>${value}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20220704 14:59:18.457" endtime="20220704 14:59:18.458"/>
+<status status="PASS" starttime="20220704 17:04:10.900" endtime="20220704 17:04:10.900"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${i}</var>
 <arg>${i+1}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220704 14:59:18.461" level="INFO">${i} = 4</msg>
-<status status="PASS" starttime="20220704 14:59:18.458" endtime="20220704 14:59:18.461"/>
+<msg timestamp="20220704 17:04:10.902" level="INFO">${i} = 4</msg>
+<status status="PASS" starttime="20220704 17:04:10.900" endtime="20220704 17:04:10.902"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>${i} == ${6}</arg>
 <doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220704 14:59:18.462" endtime="20220704 14:59:18.463"/>
+<status status="PASS" starttime="20220704 17:04:10.902" endtime="20220704 17:04:10.903"/>
 </kw>
-<status status="PASS" starttime="20220704 14:59:18.116" endtime="20220704 14:59:18.464"/>
+<status status="PASS" starttime="20220704 17:04:10.794" endtime="20220704 17:04:10.903"/>
 </iter>
 <iter>
 <var name="${i}">4</var>
@@ -749,34 +1275,34 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <arg>Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${i+1}]/android.view.ViewGroup/android.view.ViewGroup</arg>
 <arg>content-desc</arg>
 <doc>Get element attribute using given attribute: name, value,...</doc>
-<msg timestamp="20220704 14:59:18.829" level="INFO">Element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[5]/android.view.ViewGroup/android.view.ViewGroup' attribute 'content-desc' value 'Open camera to create a Short with this sound' </msg>
-<msg timestamp="20220704 14:59:18.831" level="INFO">${data} = Open camera to create a Short with this sound</msg>
-<status status="PASS" starttime="20220704 14:59:18.464" endtime="20220704 14:59:18.831"/>
+<msg timestamp="20220704 17:04:11.587" level="INFO">Element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[5]/android.view.ViewGroup/android.view.ViewGroup' attribute 'content-desc' value 'Open camera to create a Short with this sound' </msg>
+<msg timestamp="20220704 17:04:11.587" level="INFO">${data} = Open camera to create a Short with this sound</msg>
+<status status="PASS" starttime="20220704 17:04:10.903" endtime="20220704 17:04:11.587"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${data} == ${value}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220704 14:59:18.831" endtime="20220704 14:59:18.833"/>
+<status status="PASS" starttime="20220704 17:04:11.588" endtime="20220704 17:04:11.588"/>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <arg>${data}</arg>
 <arg>${value}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20220704 14:59:18.834" endtime="20220704 14:59:18.835"/>
+<status status="PASS" starttime="20220704 17:04:11.589" endtime="20220704 17:04:11.589"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${i}</var>
 <arg>${i+1}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220704 14:59:18.838" level="INFO">${i} = 5</msg>
-<status status="PASS" starttime="20220704 14:59:18.835" endtime="20220704 14:59:18.838"/>
+<msg timestamp="20220704 17:04:11.590" level="INFO">${i} = 5</msg>
+<status status="PASS" starttime="20220704 17:04:11.589" endtime="20220704 17:04:11.590"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>${i} == ${6}</arg>
 <doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220704 14:59:18.838" endtime="20220704 14:59:18.840"/>
+<status status="PASS" starttime="20220704 17:04:11.590" endtime="20220704 17:04:11.591"/>
 </kw>
-<status status="PASS" starttime="20220704 14:59:18.464" endtime="20220704 14:59:18.840"/>
+<status status="PASS" starttime="20220704 17:04:10.903" endtime="20220704 17:04:11.591"/>
 </iter>
 <iter>
 <var name="${i}">5</var>
@@ -786,37 +1312,37 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <arg>Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${i+1}]/android.view.ViewGroup/android.view.ViewGroup</arg>
 <arg>content-desc</arg>
 <doc>Get element attribute using given attribute: name, value,...</doc>
-<msg timestamp="20220704 14:59:19.144" level="INFO">Element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[6]/android.view.ViewGroup/android.view.ViewGroup' attribute 'content-desc' value 'Download' </msg>
-<msg timestamp="20220704 14:59:19.144" level="INFO">${data} = Download</msg>
-<status status="PASS" starttime="20220704 14:59:18.840" endtime="20220704 14:59:19.144"/>
+<msg timestamp="20220704 17:04:11.701" level="INFO">Element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[6]/android.view.ViewGroup/android.view.ViewGroup' attribute 'content-desc' value 'Download' </msg>
+<msg timestamp="20220704 17:04:11.701" level="INFO">${data} = Download</msg>
+<status status="PASS" starttime="20220704 17:04:11.591" endtime="20220704 17:04:11.701"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${data} == ${value}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220704 14:59:19.145" endtime="20220704 14:59:19.146"/>
+<status status="PASS" starttime="20220704 17:04:11.702" endtime="20220704 17:04:11.702"/>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <arg>${data}</arg>
 <arg>${value}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20220704 14:59:19.147" endtime="20220704 14:59:19.148"/>
+<status status="PASS" starttime="20220704 17:04:11.702" endtime="20220704 17:04:11.703"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${i}</var>
 <arg>${i+1}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220704 14:59:19.151" level="INFO">${i} = 6</msg>
-<status status="PASS" starttime="20220704 14:59:19.148" endtime="20220704 14:59:19.151"/>
+<msg timestamp="20220704 17:04:11.704" level="INFO">${i} = 6</msg>
+<status status="PASS" starttime="20220704 17:04:11.703" endtime="20220704 17:04:11.704"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>${i} == ${6}</arg>
 <doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<msg timestamp="20220704 14:59:19.154" level="INFO">Exiting for loop altogether.</msg>
-<status status="PASS" starttime="20220704 14:59:19.151" endtime="20220704 14:59:19.154"/>
+<msg timestamp="20220704 17:04:11.705" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20220704 17:04:11.704" endtime="20220704 17:04:11.705"/>
 </kw>
-<status status="PASS" starttime="20220704 14:59:18.840" endtime="20220704 14:59:19.154"/>
+<status status="PASS" starttime="20220704 17:04:11.591" endtime="20220704 17:04:11.705"/>
 </iter>
-<status status="PASS" starttime="20220704 14:59:16.294" endtime="20220704 14:59:19.155"/>
+<status status="PASS" starttime="20220704 17:04:10.411" endtime="20220704 17:04:11.705"/>
 </for>
 <kw name="Swipe By Percent" library="AppiumLibrary">
 <arg>90</arg>
@@ -825,20 +1351,20 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <arg>50</arg>
 <doc>Swipe from one percent of the screen to another percent, for an optional duration.
 Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
-<status status="PASS" starttime="20220704 14:59:19.155" endtime="20220704 14:59:21.312"/>
+<status status="PASS" starttime="20220704 17:04:11.705" endtime="20220704 17:04:13.241"/>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <var>${len}</var>
 <arg>${list_content_desc}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20220704 14:59:21.313" level="INFO">Length is 8</msg>
-<msg timestamp="20220704 14:59:21.313" level="INFO">${len} = 8</msg>
-<status status="PASS" starttime="20220704 14:59:21.312" endtime="20220704 14:59:21.313"/>
+<msg timestamp="20220704 17:04:13.241" level="INFO">Length is 8</msg>
+<msg timestamp="20220704 17:04:13.242" level="INFO">${len} = 8</msg>
+<status status="PASS" starttime="20220704 17:04:13.241" endtime="20220704 17:04:13.242"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>----------- ${len} -----------</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220704 14:59:21.314" endtime="20220704 14:59:21.315"/>
+<status status="PASS" starttime="20220704 17:04:13.242" endtime="20220704 17:04:13.242"/>
 </kw>
 <for flavor="IN ENUMERATE">
 <var>${i}</var>
@@ -852,34 +1378,34 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <arg>Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${len-2}]/android.view.ViewGroup/android.view.ViewGroup</arg>
 <arg>content-desc</arg>
 <doc>Get element attribute using given attribute: name, value,...</doc>
-<msg timestamp="20220704 14:59:21.579" level="INFO">Element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[6]/android.view.ViewGroup/android.view.ViewGroup' attribute 'content-desc' value 'Save to playlist' </msg>
-<msg timestamp="20220704 14:59:21.580" level="INFO">${data} = Save to playlist</msg>
-<status status="PASS" starttime="20220704 14:59:21.316" endtime="20220704 14:59:21.580"/>
+<msg timestamp="20220704 17:04:14.051" level="INFO">Element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[6]/android.view.ViewGroup/android.view.ViewGroup' attribute 'content-desc' value 'Save to playlist' </msg>
+<msg timestamp="20220704 17:04:14.051" level="INFO">${data} = Save to playlist</msg>
+<status status="PASS" starttime="20220704 17:04:13.243" endtime="20220704 17:04:14.051"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${data} : ${list_content_desc}[${len-1}]</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220704 14:59:21.580" endtime="20220704 14:59:21.583"/>
+<status status="PASS" starttime="20220704 17:04:14.051" endtime="20220704 17:04:14.052"/>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <arg>${data}</arg>
 <arg>${list_content_desc}[${len-1}]</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20220704 14:59:21.584" endtime="20220704 14:59:21.587"/>
+<status status="PASS" starttime="20220704 17:04:14.052" endtime="20220704 17:04:14.053"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${len}</var>
 <arg>${len-1}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220704 14:59:21.589" level="INFO">${len} = 7</msg>
-<status status="PASS" starttime="20220704 14:59:21.587" endtime="20220704 14:59:21.589"/>
+<msg timestamp="20220704 17:04:14.054" level="INFO">${len} = 7</msg>
+<status status="PASS" starttime="20220704 17:04:14.054" endtime="20220704 17:04:14.054"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>${len} == ${2}</arg>
 <doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220704 14:59:21.590" endtime="20220704 14:59:21.591"/>
+<status status="PASS" starttime="20220704 17:04:14.055" endtime="20220704 17:04:14.055"/>
 </kw>
-<status status="PASS" starttime="20220704 14:59:21.316" endtime="20220704 14:59:21.591"/>
+<status status="PASS" starttime="20220704 17:04:13.243" endtime="20220704 17:04:14.055"/>
 </iter>
 <iter>
 <var name="${i}">1</var>
@@ -889,34 +1415,34 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <arg>Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${len-2}]/android.view.ViewGroup/android.view.ViewGroup</arg>
 <arg>content-desc</arg>
 <doc>Get element attribute using given attribute: name, value,...</doc>
-<msg timestamp="20220704 14:59:22.327" level="INFO">Element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[5]/android.view.ViewGroup/android.view.ViewGroup' attribute 'content-desc' value 'Clip' </msg>
-<msg timestamp="20220704 14:59:22.328" level="INFO">${data} = Clip</msg>
-<status status="PASS" starttime="20220704 14:59:21.592" endtime="20220704 14:59:22.328"/>
+<msg timestamp="20220704 17:04:14.184" level="INFO">Element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[5]/android.view.ViewGroup/android.view.ViewGroup' attribute 'content-desc' value 'Clip' </msg>
+<msg timestamp="20220704 17:04:14.184" level="INFO">${data} = Clip</msg>
+<status status="PASS" starttime="20220704 17:04:14.056" endtime="20220704 17:04:14.185"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${data} : ${list_content_desc}[${len-1}]</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220704 14:59:22.328" endtime="20220704 14:59:22.329"/>
+<status status="PASS" starttime="20220704 17:04:14.185" endtime="20220704 17:04:14.186"/>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <arg>${data}</arg>
 <arg>${list_content_desc}[${len-1}]</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20220704 14:59:22.330" endtime="20220704 14:59:22.332"/>
+<status status="PASS" starttime="20220704 17:04:14.186" endtime="20220704 17:04:14.188"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${len}</var>
 <arg>${len-1}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220704 14:59:22.334" level="INFO">${len} = 6</msg>
-<status status="PASS" starttime="20220704 14:59:22.332" endtime="20220704 14:59:22.334"/>
+<msg timestamp="20220704 17:04:14.189" level="INFO">${len} = 6</msg>
+<status status="PASS" starttime="20220704 17:04:14.188" endtime="20220704 17:04:14.189"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>${len} == ${2}</arg>
 <doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220704 14:59:22.334" endtime="20220704 14:59:22.336"/>
+<status status="PASS" starttime="20220704 17:04:14.190" endtime="20220704 17:04:14.191"/>
 </kw>
-<status status="PASS" starttime="20220704 14:59:21.591" endtime="20220704 14:59:22.336"/>
+<status status="PASS" starttime="20220704 17:04:14.055" endtime="20220704 17:04:14.191"/>
 </iter>
 <iter>
 <var name="${i}">2</var>
@@ -926,34 +1452,34 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <arg>Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${len-2}]/android.view.ViewGroup/android.view.ViewGroup</arg>
 <arg>content-desc</arg>
 <doc>Get element attribute using given attribute: name, value,...</doc>
-<msg timestamp="20220704 14:59:22.620" level="INFO">Element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup' attribute 'content-desc' value 'Download' </msg>
-<msg timestamp="20220704 14:59:22.620" level="INFO">${data} = Download</msg>
-<status status="PASS" starttime="20220704 14:59:22.337" endtime="20220704 14:59:22.620"/>
+<msg timestamp="20220704 17:04:14.306" level="INFO">Element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup' attribute 'content-desc' value 'Download' </msg>
+<msg timestamp="20220704 17:04:14.306" level="INFO">${data} = Download</msg>
+<status status="PASS" starttime="20220704 17:04:14.191" endtime="20220704 17:04:14.306"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${data} : ${list_content_desc}[${len-1}]</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220704 14:59:22.620" endtime="20220704 14:59:22.622"/>
+<status status="PASS" starttime="20220704 17:04:14.306" endtime="20220704 17:04:14.307"/>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <arg>${data}</arg>
 <arg>${list_content_desc}[${len-1}]</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20220704 14:59:22.623" endtime="20220704 14:59:22.625"/>
+<status status="PASS" starttime="20220704 17:04:14.308" endtime="20220704 17:04:14.309"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${len}</var>
 <arg>${len-1}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220704 14:59:22.627" level="INFO">${len} = 5</msg>
-<status status="PASS" starttime="20220704 14:59:22.626" endtime="20220704 14:59:22.628"/>
+<msg timestamp="20220704 17:04:14.310" level="INFO">${len} = 5</msg>
+<status status="PASS" starttime="20220704 17:04:14.309" endtime="20220704 17:04:14.310"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>${len} == ${2}</arg>
 <doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220704 14:59:22.628" endtime="20220704 14:59:22.630"/>
+<status status="PASS" starttime="20220704 17:04:14.310" endtime="20220704 17:04:14.312"/>
 </kw>
-<status status="PASS" starttime="20220704 14:59:22.336" endtime="20220704 14:59:22.630"/>
+<status status="PASS" starttime="20220704 17:04:14.191" endtime="20220704 17:04:14.312"/>
 </iter>
 <iter>
 <var name="${i}">3</var>
@@ -963,34 +1489,34 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <arg>Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${len-2}]/android.view.ViewGroup/android.view.ViewGroup</arg>
 <arg>content-desc</arg>
 <doc>Get element attribute using given attribute: name, value,...</doc>
-<msg timestamp="20220704 14:59:23.579" level="INFO">Element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[3]/android.view.ViewGroup/android.view.ViewGroup' attribute 'content-desc' value 'Open camera to create a Short with this sound' </msg>
-<msg timestamp="20220704 14:59:23.579" level="INFO">${data} = Open camera to create a Short with this sound</msg>
-<status status="PASS" starttime="20220704 14:59:22.631" endtime="20220704 14:59:23.579"/>
+<msg timestamp="20220704 17:04:14.480" level="INFO">Element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[3]/android.view.ViewGroup/android.view.ViewGroup' attribute 'content-desc' value 'Open camera to create a Short with this sound' </msg>
+<msg timestamp="20220704 17:04:14.480" level="INFO">${data} = Open camera to create a Short with this sound</msg>
+<status status="PASS" starttime="20220704 17:04:14.312" endtime="20220704 17:04:14.480"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${data} : ${list_content_desc}[${len-1}]</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220704 14:59:23.580" endtime="20220704 14:59:23.585"/>
+<status status="PASS" starttime="20220704 17:04:14.480" endtime="20220704 17:04:14.482"/>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <arg>${data}</arg>
 <arg>${list_content_desc}[${len-1}]</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20220704 14:59:23.585" endtime="20220704 14:59:23.588"/>
+<status status="PASS" starttime="20220704 17:04:14.482" endtime="20220704 17:04:14.484"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${len}</var>
 <arg>${len-1}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220704 14:59:23.590" level="INFO">${len} = 4</msg>
-<status status="PASS" starttime="20220704 14:59:23.588" endtime="20220704 14:59:23.590"/>
+<msg timestamp="20220704 17:04:14.487" level="INFO">${len} = 4</msg>
+<status status="PASS" starttime="20220704 17:04:14.485" endtime="20220704 17:04:14.487"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>${len} == ${2}</arg>
 <doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220704 14:59:23.590" endtime="20220704 14:59:23.592"/>
+<status status="PASS" starttime="20220704 17:04:14.487" endtime="20220704 17:04:14.488"/>
 </kw>
-<status status="PASS" starttime="20220704 14:59:22.630" endtime="20220704 14:59:23.592"/>
+<status status="PASS" starttime="20220704 17:04:14.312" endtime="20220704 17:04:14.488"/>
 </iter>
 <iter>
 <var name="${i}">4</var>
@@ -1000,34 +1526,34 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <arg>Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${len-2}]/android.view.ViewGroup/android.view.ViewGroup</arg>
 <arg>content-desc</arg>
 <doc>Get element attribute using given attribute: name, value,...</doc>
-<msg timestamp="20220704 14:59:24.501" level="INFO">Element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup' attribute 'content-desc' value 'Share' </msg>
-<msg timestamp="20220704 14:59:24.501" level="INFO">${data} = Share</msg>
-<status status="PASS" starttime="20220704 14:59:23.592" endtime="20220704 14:59:24.501"/>
+<msg timestamp="20220704 17:04:14.594" level="INFO">Element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup' attribute 'content-desc' value 'Share' </msg>
+<msg timestamp="20220704 17:04:14.594" level="INFO">${data} = Share</msg>
+<status status="PASS" starttime="20220704 17:04:14.489" endtime="20220704 17:04:14.594"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${data} : ${list_content_desc}[${len-1}]</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220704 14:59:24.502" endtime="20220704 14:59:24.505"/>
+<status status="PASS" starttime="20220704 17:04:14.595" endtime="20220704 17:04:14.596"/>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <arg>${data}</arg>
 <arg>${list_content_desc}[${len-1}]</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20220704 14:59:24.506" endtime="20220704 14:59:24.507"/>
+<status status="PASS" starttime="20220704 17:04:14.596" endtime="20220704 17:04:14.597"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${len}</var>
 <arg>${len-1}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220704 14:59:24.509" level="INFO">${len} = 3</msg>
-<status status="PASS" starttime="20220704 14:59:24.508" endtime="20220704 14:59:24.510"/>
+<msg timestamp="20220704 17:04:14.598" level="INFO">${len} = 3</msg>
+<status status="PASS" starttime="20220704 17:04:14.598" endtime="20220704 17:04:14.598"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>${len} == ${2}</arg>
 <doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220704 14:59:24.510" endtime="20220704 14:59:24.511"/>
+<status status="PASS" starttime="20220704 17:04:14.599" endtime="20220704 17:04:14.600"/>
 </kw>
-<status status="PASS" starttime="20220704 14:59:23.592" endtime="20220704 14:59:24.512"/>
+<status status="PASS" starttime="20220704 17:04:14.489" endtime="20220704 17:04:14.600"/>
 </iter>
 <iter>
 <var name="${i}">5</var>
@@ -1037,57 +1563,57 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <arg>Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${len-2}]/android.view.ViewGroup/android.view.ViewGroup</arg>
 <arg>content-desc</arg>
 <doc>Get element attribute using given attribute: name, value,...</doc>
-<msg timestamp="20220704 14:59:24.854" level="INFO">Element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup' attribute 'content-desc' value 'Live chat' </msg>
-<msg timestamp="20220704 14:59:24.854" level="INFO">${data} = Live chat</msg>
-<status status="PASS" starttime="20220704 14:59:24.512" endtime="20220704 14:59:24.855"/>
+<msg timestamp="20220704 17:04:14.710" level="INFO">Element 'Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup' attribute 'content-desc' value 'Live chat' </msg>
+<msg timestamp="20220704 17:04:14.710" level="INFO">${data} = Live chat</msg>
+<status status="PASS" starttime="20220704 17:04:14.600" endtime="20220704 17:04:14.710"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${data} : ${list_content_desc}[${len-1}]</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220704 14:59:24.855" endtime="20220704 14:59:24.858"/>
+<status status="PASS" starttime="20220704 17:04:14.710" endtime="20220704 17:04:14.712"/>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <arg>${data}</arg>
 <arg>${list_content_desc}[${len-1}]</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20220704 14:59:24.859" endtime="20220704 14:59:24.861"/>
+<status status="PASS" starttime="20220704 17:04:14.712" endtime="20220704 17:04:14.713"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${len}</var>
 <arg>${len-1}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220704 14:59:24.864" level="INFO">${len} = 2</msg>
-<status status="PASS" starttime="20220704 14:59:24.861" endtime="20220704 14:59:24.864"/>
+<msg timestamp="20220704 17:04:14.714" level="INFO">${len} = 2</msg>
+<status status="PASS" starttime="20220704 17:04:14.713" endtime="20220704 17:04:14.714"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>${len} == ${2}</arg>
 <doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<msg timestamp="20220704 14:59:24.866" level="INFO">Exiting for loop altogether.</msg>
-<status status="PASS" starttime="20220704 14:59:24.864" endtime="20220704 14:59:24.866"/>
+<msg timestamp="20220704 17:04:14.715" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20220704 17:04:14.714" endtime="20220704 17:04:14.715"/>
 </kw>
-<status status="PASS" starttime="20220704 14:59:24.512" endtime="20220704 14:59:24.866"/>
+<status status="PASS" starttime="20220704 17:04:14.600" endtime="20220704 17:04:14.715"/>
 </iter>
-<status status="PASS" starttime="20220704 14:59:21.315" endtime="20220704 14:59:24.866"/>
+<status status="PASS" starttime="20220704 17:04:13.243" endtime="20220704 17:04:14.715"/>
 </for>
 <kw name="Swipe By Percent" library="AppiumLibrary">
 <arg>50</arg>
-<arg>75</arg>
+<arg>85</arg>
 <arg>50</arg>
-<arg>25</arg>
+<arg>20</arg>
 <doc>Swipe from one percent of the screen to another percent, for an optional duration.
 Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
-<status status="PASS" starttime="20220704 14:59:24.866" endtime="20220704 14:59:27.642"/>
+<status status="PASS" starttime="20220704 17:04:14.715" endtime="20220704 17:04:16.463"/>
 </kw>
 <kw name="Stop Screen Recording" library="AppiumLibrary">
 <doc>Gathers the output from the previously started screen recording              to a media file, then embeds it to the log.html(Android Only).</doc>
-<msg timestamp="20220704 14:59:29.903" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenrecord-1.mp4"&gt;&lt;video width="800px" controls&gt;&lt;source src="appium-screenrecord-1.mp4" type="video/mp4"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220704 14:59:27.643" endtime="20220704 14:59:29.907"/>
+<msg timestamp="20220704 17:04:18.210" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenrecord-1.mp4"&gt;&lt;video width="800px" controls&gt;&lt;source src="appium-screenrecord-1.mp4" type="video/mp4"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220704 17:04:16.464" endtime="20220704 17:04:18.216"/>
 </kw>
-<status status="PASS" starttime="20220704 14:59:13.933" endtime="20220704 14:59:29.908"/>
+<status status="PASS" starttime="20220704 17:04:08.959" endtime="20220704 17:04:18.216"/>
 </kw>
-<status status="PASS" starttime="20220704 14:58:15.602" endtime="20220704 14:59:29.909"/>
+<status status="PASS" starttime="20220704 17:03:32.790" endtime="20220704 17:04:18.217"/>
 </test>
-<status status="PASS" starttime="20220704 14:58:14.326" endtime="20220704 14:59:29.912"/>
+<status status="PASS" starttime="20220704 17:03:32.537" endtime="20220704 17:04:18.219"/>
 </suite>
 <statistics>
 <total>

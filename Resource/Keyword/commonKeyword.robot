@@ -38,7 +38,7 @@ Verify music name
     #     IF  '${status_skip_ad}' == 'True'
     #         Click Element       ${pnl_skip_ad}
     #     ELSE
-    #         Wait Until Element Is Visible       ${img_ad}
+    #         Wait Until Element Is Visible       ${img_ad}  15s
     #         Click Element       ${img_ad}
     #     END
     # ELSE
@@ -70,11 +70,11 @@ Verify music name
                 END
             END  
         ELSE
-            ${status_click_thumnail}     Run Keyword And Return Status     Click Element       ${pnl_skip_ad}
+            ${status_click_thumnail}     Run Keyword And Ignore Error     Click Element       ${pnl_skip_ad}
             IF  '${click_skip_ad}' == 'True'
                 Log To Console     Click skip ad2
             ELSE
-                ${status}    Run Keyword And Return Status     Page Should Not Contain Element      ${img_ad}
+                ${status}    Run Keyword And Ignore Error     Page Should Not Contain Element      ${img_ad}
                 Log To Console     ${status} : VDO Playing2
             END
         END
@@ -101,7 +101,6 @@ Verify icon ui youtube account page
     Page Should Contain Element        ${icn_help_and_feedback}
     Page Should Contain Element        ${icn_youTube_studio}
     Page Should Contain Element        ${icn_youtube_music}
-    # Page Should Contain Element        ${icn_youtube_kids}
     
 Verify menu name ui youtube account page
     [Arguments]     ${list_mnu_name}
@@ -118,10 +117,12 @@ Verify menu name ui youtube account page
     Capture Page Screenshot     ${OUTPUTDIR}/CaptureScreens/profile2.png 
     Element Text Should Be      ${mnu_privacy_policy}        ${list_mnu_name}[14]
     Element Text Should Be      ${mnu_terms_of_service}      ${list_mnu_name}[15]
+    Page Should Contain Element        ${icn_youtube_kids}
     Click Element       ${btn_close}
 
 Verify icon on page play music
     [Arguments]    ${list_content_desc}
+    Page Should Not Contain Element         ${icn_pause_music}
     Wait Until Page Contains Element    ${pnl_onload}
     FOR    ${i}    ${value}    IN ENUMERATE   @{list_content_desc}
         Page Should Contain Element       Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${i+1}]/android.view.ViewGroup/android.view.ViewGroup[contains(@content-desc, "${value}")]/android.widget.ImageView
@@ -164,6 +165,6 @@ Verify name on page play music
         ${len}    Set Variable    ${len-1}
         Exit For Loop IF    ${len} == ${2}
     END
-    Swipe By Percent      50   75   50   25
+    Swipe By Percent      50   85   50   20
     Stop Screen Recording
 
