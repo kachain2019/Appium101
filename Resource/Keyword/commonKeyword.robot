@@ -10,6 +10,7 @@ Open application youtube on android
     ...   deviceName=${DEVICE_NAME_ANDROID}      
     ...   appPackage=${APP_PACKAGE}     
     ...   appActivity=${MAIN_ACTIVITY}
+    Start Screen Recording
 
 Input music
     Wait Until Page Contains Element       ${icn_search}
@@ -80,9 +81,6 @@ Verify music name
     ELSE
         Log To Console     Not Ad
     END
-
-
-    # Xpath=//android.widget.LinearLayout[@resource-id="com.google.android.youtube:id/countdown_text"]
 
 Go to ui youtube account page
     Wait Until Page Contains Element    ${icn_account} 
@@ -155,6 +153,7 @@ Verify name on page play music
     #     ${i}    Set Variable    ${i+1}
     #     Exit For Loop IF    ${i} == ${5}
     # END
+
     Swipe By Percent	90	50	10	50
     ${len}      Get Length     ${list_content_desc} 
     Log To Console      ----------- ${len} -----------
@@ -166,3 +165,5 @@ Verify name on page play music
         Exit For Loop IF    ${len} == ${2}
     END
     Swipe By Percent      50   75   50   25
+    Stop Screen Recording
+
