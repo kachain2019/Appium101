@@ -67,3 +67,4 @@ ${txt_subscribe}     Xpath=//android.view.ViewGroup[3]/android.view.ViewGroup/an
 ${icn_explan_comments}    Xpath=//android.view.ViewGroup[4]/android.view.ViewGroup/android.widget.ImageView[1]
 ${icn_pause_music}      Xpath=//android.widget.ImageView[@resource-id="com.google.android.youtube:id/player_control_play_pause_replay_button"]
 # ${icn_profile_comments}    Xpath=//android.view.ViewGroup[4]/android.view.ViewGroup/android.widget.ImageView[2]
+${lst_music}                 //*[@resource-id="com.google.android.youtube:id/watch_list"]/android.view.ViewGroup[3]
