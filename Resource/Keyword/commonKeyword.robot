@@ -102,8 +102,6 @@ Verify icon ui youtube account page
         END
         Exit For Loop IF    ${i} == ${12}
     END
-    Page Should Contain Element     ${mnu_privacy_policy}
-    Page Should Contain Element     ${mnu_terms_of_service}
     Log To Console   --- Swipe to top ---
     Swipe By Percent      50   20   50   80
 
