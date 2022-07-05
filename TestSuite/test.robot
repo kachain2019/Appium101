@@ -8,7 +8,7 @@ Resource          ${CURDIR}/../Resource/Localized/TH/commonLocalized.robot
 TC1 - Verify play music is correct
     Open application youtube on android
     Go to ui youtube account page
-    Verify icon ui youtube account page
+    Verify icon ui youtube account page              ${list_mnu_account_en}
     Verify menu name ui youtube account page         ${list_mnu_account_en}
     Input music
     Search music

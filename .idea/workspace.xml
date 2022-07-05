@@ -12,12 +12,10 @@
       <change beforePath="$PROJECT_DIR$/TestSuite/CaptureScreens/SearchMusic.png" beforeDir="false" afterPath="$PROJECT_DIR$/TestSuite/CaptureScreens/SearchMusic.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestSuite/CaptureScreens/profile1.png" beforeDir="false" afterPath="$PROJECT_DIR$/TestSuite/CaptureScreens/profile1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestSuite/CaptureScreens/profile2.png" beforeDir="false" afterPath="$PROJECT_DIR$/TestSuite/CaptureScreens/profile2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSuite/appium-screenrecord-1.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSuite/appium-screenshot-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/TestSuite/appium-screenshot-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSuite/appium-screenshot-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/TestSuite/appium-screenshot-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSuite/log.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSuite/output.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSuite/report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestSuite/appium-screenrecord-1.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/TestSuite/appium-screenrecord-1.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestSuite/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TestSuite/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestSuite/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/TestSuite/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestSuite/reportSuccessEN.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestSuite/test.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestSuite/test.robot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
