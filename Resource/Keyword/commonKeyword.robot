@@ -52,7 +52,7 @@ Verify music name
         Capture Page Screenshot   ${OUTPUTDIR}/CaptureScreens/AdMusic.png
         ${status_ad}     Run Keyword And Return Status      Wait Until Element Is Visible       ${pnl_skip_ad}   
         ${click_skip_ad}     Run Keyword And Return Status     Click Element       ${pnl_skip_ad}
-        IF  '${click_skip_ad}' == 'True'
+        IF  '${click_skip_ad}' == 'True' and '${status_ad}' == 'True'
             Run Keyword And Ignore Error     Click Element       ${pnl_skip_ad}
             Log To Console     click skip ad
         ELSE IF   '${click_skip_ad}' == 'False'
@@ -71,7 +71,7 @@ Verify music name
                 END
             END  
         ELSE
-            ${status_click_thumnail}     Run Keyword And Ignore Error     Click Element       ${pnl_skip_ad}
+            ${status_click_thumnail}     Run Keyword And Ignore Error     Page Should Not Contain Element       ${pnl_skip_ad}
             IF  '${click_skip_ad}' == 'True'
                 Log To Console     Click skip ad2
             ELSE
@@ -155,7 +155,7 @@ Verify icon on page play music
     END
 
 Verify name on page play music
-    [Arguments]    ${list_content_desc}
+    [Arguments]    ${list_content_desc}    ${subscribe}
     Swipe By Percent	20	50	80	50	
     FOR    ${i}    ${value}    IN ENUMERATE   @{list_content_desc}
         ${data}     Get Element Attribute        Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${i+1}]/android.view.ViewGroup/android.view.ViewGroup       content-desc
@@ -165,12 +165,16 @@ Verify name on page play music
         Exit For Loop IF    ${i} == ${6}
     END
     Capture Page Screenshot   ${OUTPUTDIR}/CaptureScreens/Music1.png
+
     # FOR    ${i}    ${value}    IN ENUMERATE   @{list_content_desc}
     #     Element Attribute Should Match      Xpath=//*[not(@resource-id="com.google.android.youtube:id/watch_list") and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[${i+1}]/android.view.ViewGroup/android.view.ViewGroup        content-desc       *${value}* 
     #     ${i}    Set Variable    ${i+1}
     #     Exit For Loop IF    ${i} == ${5}
     # END
-
+    
+    ${txt_Subscribe}        Get Element Attribute        Xpath=//*[@resource-id="com.google.android.youtube:id/watch_list" and @class="android.support.v7.widget.RecyclerView"]/android.view.ViewGroup[3]/android.view.ViewGroup/android.view.ViewGroup       content-desc
+    Log To Console      ${Subscribe}
+    Should Be Equal     ${txt_Subscribe}        ${subscribe}
     Swipe By Percent	80	50	20	50
     ${len}      Get Length     ${list_content_desc} 
     Log To Console      ----------- ${len} -----------
@@ -184,6 +188,6 @@ Verify name on page play music
     Swipe By Percent      50   85   50   15
     Capture Page Screenshot   ${OUTPUTDIR}/CaptureScreens/Music2-Swipe.png
     Page Should Not Contain Element         ${icn_pause_music}
-    Page Should Contain Element     Xpath=//*[@resource-id="com.google.android.youtube:id/watch_list"]/android.view.ViewGroup[3]
+    Page Should Contain Element       ${lst_music}
     Stop Screen Recording
 
